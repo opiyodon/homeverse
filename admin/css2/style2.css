@@ -1,0 +1,1170 @@
+/* ====================================================================================================================
+  ================================  IMPORTED FONTS FROM GOOGLE FONTS  ==============================================================
+  ==================================================================================================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ====================================================================================================================
+================================  INITIAL SETTING FOR THE CSS BOX MODEL ||| STRIPPING ALL INITIAL DEFAULT BROWSER STYLES  ==============================================================
+==================================================================================================================== */
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--light_txt);
+  font-family: Poppins;
+}
+
+/* ====================================================================================================================
+================================  ROOT SEETINGS ~ FOR EASY MODIFICATION ||| ALSO  LIGHT MODE COLOR PALETTE  ==============================================================
+==================================================================================================================== */
+:root{
+    --primary:#8fc008;
+    --primary2:#546918;
+    --primary3:#e4faab;
+        
+    --primary4:#7c3aed;
+    --primary4b:#3b1677;
+
+    --primary5:#ca8a04;
+    --primary5b:#643b0c;
+
+    --primary6:#e11d48;
+    --primary6b:#53091e;
+
+    --bg_bright:#dddee0;
+    --bg_bright2:#d6d3d3;
+    --bg_dim:#30312f;
+    --bg_dim2:#080808;
+
+    --border_bright:#d1d5db;
+    --border_dim:#374151;
+
+    --light_txt:#374151;
+    --light_txt2:#8d8f91;
+
+    --white:black;
+    --black:rgb(196, 186, 163);
+
+    --scroll_color: #acafb4;
+}
+
+/* ====================================================================================================================
+================================   DARK MODE COLOR PALETTE   ==============================================================
+==================================================================================================================== */
+.DARK{
+    --bg_bright:#1c1f24;
+    --bg_bright2:#201d1d;
+    --bg_dim:#000207;
+    --bg_dim2:#000207;
+
+    --border_bright:#3e3e3f;
+    --border_dim:#757677;
+
+    --light_txt:#f5f6f8;
+    --light_txt2:#f5f6f8;
+
+    --white:white;
+    --black:black;
+
+    --scroll_color: black;
+}
+
+html{
+  scroll-behavior: smooth;/*SMOOTH SCROLL IN THE PAGE*/
+  scrollbar-color: var(--scroll_color) var(--primary); /*CUSTOMIZED SCROLL BAR FOR OLD BROWSERS*/
+  overflow-x: hidden;/*HIDES OVERFLOW*/
+  width: 100%;
+}
+
+/* ====================================================================================================================
+================================   CUSTOMIZED SCROLL BAR   ==============================================================
+==================================================================================================================== */
+::-webkit-scrollbar{
+  width: 1.3vw;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--scroll_color);
+  border-radius: 100vw;
+  margin-block: 0.1vw;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--primary);
+  border: 0.2vw solid var(--scroll_color);
+  border-radius: 100vw;
+}
+
+body{
+  background-color: var(--bg_bright);
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;/*HIDES OVERFLOW*/
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ====================================================================================================================
+================================   PRE-LOADER   ==============================================================
+==================================================================================================================== */
+.pre_loader{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  opacity: 1;
+  background: var(--bg_bright);
+}
+
+.loader{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring{
+  width: 200px;
+  height: 200px;
+  border: 0px solid var(--bg_bright);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ring:nth-child(1){
+  border-bottom-width: 8px;
+  border-color: var(--primary);
+  animation: rotate1 2s linear infinite;
+}
+
+.ring:nth-child(2){
+  border-right-width: 8px;
+  border-color: rgb(10, 200, 254);
+  animation: rotate2 2s linear infinite;
+}
+
+.ring:nth-child(3){
+  border-top-width: 8px;
+  border-color: rgb(100, 199, 0);
+  animation: rotate3 2s linear infinite;
+}
+
+.loading{
+  color: rgb(255, 0, 255);
+  animation: text 2s ease-in-out infinite;
+  font-size: 85%;
+}
+
+@keyframes rotate1{
+  0%{
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate2{
+  0%{
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate3{
+  0%{
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100%{
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+@keyframes text{
+  50%{
+    color: var(--bg_bright);
+  }
+}
+
+/*
+==========SECTIONS CONTAINER=========
+*/
+.SECTIONS{
+    position: relative;
+    width: 100vw;
+}
+
+.hidden{
+  display: none;
+}
+
+/* ====================================================================================================================
+  ================================   GLASSY NAV BAR   ==============================================================
+  ==================================================================================================================== */
+nav{
+    position: sticky;/*NAV BAR STICKS AT THE TOP WEN TOP IS 0*/
+    top: 0px;
+    background-color: var(--black);
+    z-index: 1000;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo a{
+  display: flex;
+  align-items: center;
+}
+
+.logo a img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.logo a span{
+    color: var(--primary);
+    font-family: Clicker Script;
+    font-size: 35px;
+    margin-top: -5px;
+}
+
+menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.NAV_TOGGLER{
+  display: none;
+}
+
+ul li a{
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li a:hover{
+    color: var(--primary);
+}
+
+.dark-mode{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.DL_ICON{
+  transition: all 0.3s ease-in-out;
+}
+
+.DL_ICON:hover{
+  color: var(--primary);
+}
+
+/* ====================================================================================================================
+  ================================   DARK MODE/LIGHTMODE BUTTON   ==============================================================
+  ==================================================================================================================== */
+.DAY_NIGHT i{/*DARK MODE/LIGHTMODE BUTTON*/
+    color: var(--white);
+    padding: 5px;
+    padding-bottom: 6px;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ====================================================================================================================
+  ================================   PROFILE PIC BUTTON   ==============================================================
+  ==================================================================================================================== */
+  .user-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .user-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: var(--black);
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px 30px;
+    box-shadow: 0px 8px 16px 0px var(--white);
+    z-index: 10000;
+  }
+
+  .dropdown-item {
+    display: flex;
+    padding: 10px;
+    width: fit-content;
+    text-decoration: none;
+    color: var(--light_txt);
+    cursor: pointer;
+  }
+
+/* ====================================================================================================================
+  ================================   GO TO TOP BUTTON   ==============================================================
+  ==================================================================================================================== */
+/*styling for GO TO TOP button goes here*/
+.to-top{
+    background: var(--white);
+    position: fixed;
+    bottom: -32px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
+    box-shadow: 0 0 0px var(--primary);
+    animation: glow 1.3s linear infinite;/*TO ADD ANIMATION OF GLOWING EFFECT*/
+    animation-delay: 0.5s;
+}
+
+@keyframes glow {/*KEY FRAMES USED TO ADD TIMING OF GLOW AT DIFFERENT INTERVALS*/
+    0%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px var(--primary);
+    }
+    60%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px var(--primary),
+                    0 0 20px var(--primary),
+                    0 0 40px var(--primary);
+    }
+    100%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px var(--primary),
+                    0 0 20px var(--primary),
+                    0 0 40px var(--primary),
+                    0 0 80px var(--primary),
+                    0 0 160px var(--primary);
+    }
+}
+
+.to-top i{
+    color: var(--primary);
+}
+
+.to-top-active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 2000;
+}
+
+
+
+/* ====================================================================================================================
+================================  HOME PAGE  ==============================================================
+==================================================================================================================== */
+#Home{
+  padding: 60px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+.MAIN_CONTENT{
+  padding: 20px 40px;
+  min-height: 62vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.HEADER{
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.DASH_BOX{
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.COL_4{
+  background: var(--black);
+  width: 330px;
+  margin: 2px;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.COL_4 .NUM{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.COL_4 .TXT{
+  padding-top: 2px;
+}
+
+.btn{
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 7px;
+  outline: transparent;
+  border: transparent;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn2{
+  width: fit-content;
+  padding: 5px 20px;
+  border-radius: 7px;
+  outline: transparent;
+  border: transparent;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.BTN_PRI{
+  background: var(--primary4);
+}
+
+.BTN_PRI:hover{
+  background: var(--primary4b);
+}
+
+.BTN_SEC{
+  background: var(--primary5);
+}
+
+.BTN_SEC:hover{
+  background: var(--primary5b);
+}
+
+.BTN_DAN{
+  background: var(--primary6);
+}
+
+.BTN_DAN:hover{
+  background: var(--primary6b);
+}
+
+.TBL_40{
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.T_ROW2{
+  display: flex;
+  gap: 20px;
+  padding: 10px 0px;
+}
+
+.w_40{
+  width: 150px;
+}
+
+.SUCCESS{
+  color: var(--primary);
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.SUCCESS2{
+  color: var(--primary);
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.ERROR{
+  color: red;
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.ERROR2{
+  color: red;
+  padding: 20px 0px;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* ====================================================================================================================
+================================  LOGIN PAGE  ==============================================================
+==================================================================================================================== */
+.login {
+  background: url(../../images/11.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.MyLoginForm {
+  width: 700px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  color: var(--light_txt);
+  background-color: transparent;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+}
+
+.MyLoginForm h1 {
+  letter-spacing: 2px;
+}
+
+.LOGIN_LINK_ITEM{
+  color: var(--primary2);
+  text-decoration: underline;
+}
+
+.LOGIN_LINK_ITEM:hover{
+  color: var(--primary);
+}
+
+
+
+/* ====================================================================================================================
+================================  RESET PASSWORD PAGE  ==============================================================
+==================================================================================================================== */
+.resetPassword {
+  background: url(../../images/16.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.MyResetPasswordForm {
+  width: 700px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  color: var(--light_txt);
+  background-color: transparent;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+}
+
+.MyResetPasswordForm h1 {
+  letter-spacing: 2px;
+}
+
+
+
+/* ====================================================================================================================
+================================  PROFILE PAGE  ==============================================================
+==================================================================================================================== */
+#Profile{
+  padding: 60px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+.PROFILE .ROW{
+  display: flex;
+  justify-content: center;
+}
+
+.SECTION_TITLE{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 8px 50px;
+  border-radius: 80px;
+  background: var(--primary3);
+  color: var(--primary);
+}
+
+.PROFILE_CARD_BOX{
+  display: flex;
+  justify-content: center;
+  width: 1250px;
+}
+
+.PROFILE_CARD{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--bg_bright2);
+  border-radius: 10px;
+}
+
+.profileform{
+  width: 50%;
+  margin: 0 auto;
+}
+
+fieldset{
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+legend{
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.PROFILE_CARD_ROW{
+  display: flex;
+  justify-content: center;
+}
+
+.PROFILE_ROW1{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.BACKGROUND_IMAGE{
+  padding: 2px;
+}
+
+#B_img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.B_cad2{
+  display: flex;
+  justify-content: center;
+  border: 2px solid transparent;
+  width: 250px;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.PROFILE_TXT{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profile_username p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.profile_email p{
+  font-size: 20px;
+  color: red;
+}
+
+
+
+/* ====================================================================================================================
+================================  MANAGE ADMIN PAGE  ==============================================================
+==================================================================================================================== */
+#manage_admin{
+  padding: 60px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+.BTN_BOX{
+  padding: 15px 10px;
+}
+
+.BTN_BOX2{
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TBL_FULL{
+  width: 100%;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.TH{
+  border-bottom: 2px solid var(--border_bright);
+  padding-top: 3px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+td{
+  padding: 10px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.text_left{
+  text-align: left;
+}
+
+.text_center{
+  text-align: center;
+}
+
+.ACTION_BOX{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+/* ====================================================================================================================
+================================  ADD ADMIN PAGE  ==============================================================
+==================================================================================================================== */
+#add_admin{
+  padding: 55px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+.HEADER2{
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.form_center{
+  display: flex;
+  justify-content: center;
+}
+
+.TBL_30{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.INPUT{
+  border-radius: 10px;
+  color: var(--light_txt);
+  background: transparent;
+  border: 2px solid var(--primary);
+  padding: 7px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.INPUT2{
+  border-radius: 10px;
+  color: var(--light_txt);
+  background: var(--bg_bright2);
+  border: 2px solid var(--primary);
+  padding: 7px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* ====================================================================================================================
+================================  UPDATE ADMIN PAGE  ==============================================================
+==================================================================================================================== */
+#update_admin{
+  padding: 60px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+.RADIO_BOX{
+  display: flex;
+  gap: 20px;
+}
+
+.RADIO_BOX_ITEM{
+  display: flex;
+  gap: 5px;
+}
+
+
+/* ====================================================================================================================
+================================  MANAGE PROPERTY PAGE  ==============================================================
+==================================================================================================================== */
+#manage_property{
+  padding: 60px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+.PROP_IMG{
+  width: 150px;
+  border-radius: 10px;
+}
+
+.w_40{
+  width: 200px;
+}
+
+
+
+/* ====================================================================================================================
+================================  ADD BLOG PAGE  ==============================================================
+==================================================================================================================== */
+#add_blog{
+  padding: 55px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+.TBL{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.TBL_BOX{
+  display: flex;
+  gap: 30px;
+}
+
+
+
+/* ====================================================================================================================
+================================  UPDATE PROPERTY PAGE  ==============================================================
+==================================================================================================================== */
+#update_property{
+  padding: 60px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+.ADD_P_FORM{
+  display: flex;
+  justify-content: center;
+}
+
+.ADD_P_FORM .ROW{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.w_402{
+  width: 50%;
+}
+
+.ROW_BOX{
+  display: flex;
+  gap: 80px;
+}
+
+.T_ROW{
+  display: flex;
+  gap: 20px;
+  padding: 10px 0px;
+}
+
+
+/* ====================================================================================================================
+================================  MANAGE REVIEW PAGE  ==============================================================
+==================================================================================================================== */
+#manage_review{
+  padding: 60px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+
+
+/* ====================================================================================================================
+================================  UPDATE REVIEW PAGE  ==============================================================
+==================================================================================================================== */
+#update_review{
+  padding: 55px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+
+/* ====================================================================================================================
+================================  MANAGE BLOG PAGE  ==============================================================
+==================================================================================================================== */
+#manage_blog{
+  padding: 60px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+
+
+/* ====================================================================================================================
+================================  UPDATE BLOG PAGE  ==============================================================
+==================================================================================================================== */
+#update_blog{
+  padding: 55px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+
+/* ====================================================================================================================
+================================  MANAGE ORDER PAGE  ==============================================================
+==================================================================================================================== */
+#manage_order{
+  padding: 60px 20px;
+  background: var(--bg_bright2);
+  margin-top: -24px;
+}
+
+
+
+/* ====================================================================================================================
+================================  UPDATE ORDER PAGE  ==============================================================
+==================================================================================================================== */
+#update_order{
+  padding: 60px 20px;
+  background: var(--bg_bright);
+  margin-top: -24px;
+}
+
+
+
+/* ====================================================================================================================
+================================  FOOTER STYLING ||| REUSABLE CODE FOR ALL THE PAGES  ==============================================================
+==================================================================================================================== */
+.Footer{
+  background-color: var(--black);
+  padding: 20px 100px;
+  color: var(--light_txt);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer p a{
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================================================================================================================================  MEDIA QUERIES  ================================================================================================================================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MOBILE PHONES*/
+@media screen and (max-width: 640px) {
+  nav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 20px;
+  }
+
+  .logo{
+    font-size: 22px;
+    font-weight: 600;
+  }
+      
+  menu ul{
+    position: absolute;
+    height: 100vh;
+    width: 80%;
+    top: 70px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--black);
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 150px;
+  }
+
+  .NAV_TOGGLER{
+    display: block;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }  
+
+  .NAV_TOGGLER_CLOSE{
+    display: none;
+  }
+
+  .NAV_TOGGLER span{
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+  }
+      
+  menu ul li a{
+    font-size: 20px;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  HOME PAGE  ==============================================================
+  ==================================================================================================================== */
+  .MAIN_CONTENT{
+    min-height: 70vh;
+  }
+
+  .MAIN_CONTENT .ROW{
+    overflow-x: scroll;
+  }
+
+  .DASH_BOX{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .COL_4{
+    width: 255px;
+  }
+
+  .btn{
+    width: 155px;
+  }
+
+  .btn2{
+    width: 180px;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  MANAGE ADMIN PAGE  ==============================================================
+  ==================================================================================================================== */
+  .TH{
+    padding: 0px 30px;
+  }
+
+  td{
+    padding: 0px 30px;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  FOOTER STYLING ||| REUSABLE CODE FOR ALL THE PAGES  ==============================================================
+  ==================================================================================================================== */
+  .Footer{
+    padding: 20px 50px;
+  }
+}
