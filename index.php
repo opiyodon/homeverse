@@ -8,7 +8,7 @@
 			<div class="HOME">
 						
 				<div class="submit">
-					<a href="<?php echo SITEURL_USER; ?>add_property.php" class="btn btn-submit">Submit Propertys</a>
+					<a href="<?php echo SITEURL_USER; ?>add_property.php" class="btn btn-submit">Submit Property</a>
 				</div>
 
                 <?php 
