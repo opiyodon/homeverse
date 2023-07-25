@@ -11,7 +11,7 @@
 						<div class="ROW"></div>
 					</div>
 
-					<div>
+					<div class="hide_it">
 						<img src="images/5.jpeg" alt="" class="IMG2">
 					</div>
 				</div>
@@ -28,7 +28,7 @@
 							</p>
 						</div>
 
-						<div>
+						<div class="ABOUT_TXT">
 							<p>
 								Over 39,000 people work for us in more than 70 countries all over the world. <br> This breadth of global coverage, combined with specialist services enable us to stay the top of the world market.
 							</p>

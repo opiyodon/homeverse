@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER2">Update Property</div>
 
@@ -105,35 +105,35 @@
                                 <table class="TBL_30">
                                     
                                     <tr class="T_ROW">
-                                        <td class="w_442">Name :</td>
+                                        <td class="w_44">Name :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="name" value="<?php echo $name ?>">
+                                            <input type="text" class="INPUT w_50" name="name" value="<?php echo $name ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Type :</td>
+                                        <td class="w_44">Type :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="type" value="<?php echo $type ?>">
+                                            <input type="text" class="INPUT w_50" name="type" value="<?php echo $type ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Status :</td>
+                                        <td class="w_44">Status :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="status" value="<?php echo $status ?>">
+                                            <input type="text" class="INPUT w_50" name="status" value="<?php echo $status ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">City :</td>
+                                        <td class="w_44">City :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="city" value="<?php echo $city ?>">
+                                            <input type="text" class="INPUT w_50" name="city" value="<?php echo $city ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Current Background :</td>
+                                        <td class="w_44">Current Background :</td>
                                                 <td>
 
                                                     <?php
@@ -160,14 +160,14 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Select New Background :</td>
+                                        <td class="w_44">Select New Background :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="backgroundName">
+                                            <input type="file" class="INPUT w_50" name="backgroundName">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Current Picture 1 :</td>
+                                        <td class="w_44">Current Picture 1 :</td>
                                                 <td>
 
                                                     <?php
@@ -194,14 +194,14 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Select New Picture 1 :</td>
+                                        <td class="w_44">Select New Picture 1 :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="pictureName">
+                                            <input type="file" class="INPUT w_50" name="pictureName">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Current Picture 2 :</td>
+                                        <td class="w_44">Current Picture 2 :</td>
                                                 <td>
 
                                                     <?php
@@ -228,44 +228,44 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Select New Picture 2 :</td>
+                                        <td class="w_44">Select New Picture 2 :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="pictureName2">
+                                            <input type="file" class="INPUT w_50" name="pictureName2">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Old Price :</td>
+                                        <td class="w_44">Old Price :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="oldPrice" value="<?php echo $oldPrice ?>">
+                                            <input type="number" class="INPUT w_50" name="oldPrice" value="<?php echo $oldPrice ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Discount :</td>
+                                        <td class="w_44">Discount :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="discount" value="<?php echo $discount ?>">
+                                            <input type="number" class="INPUT w_50" name="discount" value="<?php echo $discount ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Bedrooms :</td>
+                                        <td class="w_44">Bedrooms :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="bedrooms" value="<?php echo $bedrooms ?>">
+                                            <input type="number" class="INPUT w_50" name="bedrooms" value="<?php echo $bedrooms ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Bathrooms :</td>
+                                        <td class="w_44">Bathrooms :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="bathrooms" value="<?php echo $bathrooms ?>">
+                                            <input type="number" class="INPUT w_50" name="bathrooms" value="<?php echo $bathrooms ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Square Ft :</td>
+                                        <td class="w_44">Square Ft :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="squareFt" value="<?php echo $squareFt ?>">
+                                            <input type="number" class="INPUT w_50" name="squareFt" value="<?php echo $squareFt ?>">
                                         </td>
                                     </tr>
 
@@ -274,17 +274,17 @@
                                 <table class="TBL_30">
                                     
                                     <tr  class="T_ROW">
-                                        <td>Description :</td>
+                                        <td class="w_44">Description :</td>
                                     </tr>
                                     
                                     <tr  class="T_ROW">
                                         <td>
-                                            <textarea type="text" class="INPUT" name="description" id="" cols="30" rows="10"><?php echo $description ?></textarea>
+                                            <textarea type="text" class="INPUT w_80" name="description" id="" cols="30" rows="10"><?php echo $description ?></textarea>
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Featured :</td>
+                                        <td class="w_44">Featured :</td>
                                         <td>
                                             <div class="RADIO_BOX">
                                                 <div class="RADIO_BOX_ITEM">
@@ -300,7 +300,7 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Active :</td>
+                                        <td class="w_44">Active :</td>
                                         <td>
                                             <div class="RADIO_BOX">
                                                 <div class="RADIO_BOX_ITEM">
@@ -316,7 +316,7 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Blog :</td>
+                                        <td class="w_44">Blog :</td>
                                         <td>
                                             <div class="RADIO_BOX">
                                                 <div class="RADIO_BOX_ITEM">
@@ -332,30 +332,30 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Owner :</td>
+                                        <td class="w_44">Owner :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="owner" value="<?php echo $owner ?>">
+                                            <input type="text" class="INPUT w_50" name="owner" value="<?php echo $owner ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Phone :</td>
+                                        <td class="w_44">Phone :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="phone" value="<?php echo $phone ?>">
+                                            <input type="number" class="INPUT w_50" name="phone" value="<?php echo $phone ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Whatsapp :</td>
+                                        <td class="w_44">Whatsapp :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-72" name="whatsapp" value="<?php echo $whatsapp ?>">
+                                            <input type="number" class="INPUT w_50" name="whatsapp" value="<?php echo $whatsapp ?>">
                                         </td>
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_442">Email :</td>
+                                        <td class="w_44">Email :</td>
                                         <td>
-                                            <input type="email" class="INPUT" name="email" value="<?php echo $email ?>">
+                                            <input type="email" class="INPUT w_50" name="email" value="<?php echo $email ?>">
                                         </td>
                                     </tr>
 
@@ -398,9 +398,6 @@
                             $type = $_POST['type'];
                             $status = $_POST['status'];
                             $city = $_POST['city'];
-                            $backgroundName = $_POST['backgroundName'];
-                            $pictureName = $_POST['pictureName'];
-                            $pictureName2 = $_POST['pictureName2'];
                             $oldPrice = $_POST['oldPrice'];
                             $discount = $_POST['discount'];
                             $bedrooms = $_POST['bedrooms'];
@@ -420,76 +417,48 @@
                             //CHeck whether upload button is clicked or not
                             if(isset($_FILES['backgroundName']['name']))
                             {
-                                //Upload BUtton Clicked
-                                $image_name = $_FILES['backgroundName']['name']; //New Image NAme
-
-                                //CHeck whether th file is available or not
+                                //get the details of the selected image
+                                $image_name = $_FILES['backgroundName']['name'];
+                
+                                //check whether the image is selected or not and upload image only if selected
                                 if($image_name!="")
                                 {
-                                    //IMage is Available
-                                    //A. Uploading New Image
-
-                                    //REname the Image
-                                    $ext = end(explode('.', $image_name)); //Gets the extension of the image
-
+                                    //image is selected
+                                    //A.REname the image
+                                    //get the extension of selected image
+                                    $ext = end(explode('.', $image_name));
+                
                                     //create new name for image
                                     $image_name = "Background-Name-".rand(0000,9999).".".$ext; //new image name may be "Background-Name-8462.jpg"
-
+                
                                     //B.UPload the image
                                     //get the SRC path and Destination path
-
+                
                                     //Source path is the current location of image to be uploaded
-                                    $src_path = $_FILES['backgroundName']['tmp_name'];
-
+                                    $src = $_FILES['backgroundName']['tmp_name'];
+                
                                     //Destination path is the location uploaded image will be stored
-                                    $dest_path = "../images/property/background/".$image_name;
-
-                                    //Upload the image
-                                    $upload = move_uploaded_file($src_path, $dest_path);
-
-                                    /// CHeck whether the image is uploaded or not
+                                    $dst = "../images/property/background/".$image_name;
+                
+                                    //finally upload the image
+                                    $upload = move_uploaded_file($src, $dst);
+                
+                                    //check whether image uploaded or not
                                     if($upload==false)
                                     {
                                         //failed to upload the image
                                         //redirect to home page with error
-                                        $_SESSION['upload1'] = "<div class='ERROR'>Failed to Upload Background</div>";
+                                        $_SESSION['upload'] = "<div class='ERROR'>Failed to Upload Image</div>";
                                         header('location:'.SITEURL_ADMIN.'manage_property.php');
                                         ob_end_flush();
                                         //stop the process
                                         die();
                                     }
-                                    //C. Remove the image if new image is uploaded and current image exists
-                                    //Remove current Image if Available
-                                    if($backgroundName != "")
-                                    {
-                                        //Current Image is Available
-                                        //REmove the image
-                                        $remove_path = "../images/property/background/".$backgroundName;
-
-                                        //remove the image
-                                        $remove = unlink($remove_path);
-
-                                        //Check whether the image is removed or not
-                                        if($remove==false)
-                                        {
-                                            //set the session message
-                                            $_SESSION['remove'] = "<div class='ERROR'>Failed to Remove Background</div>";
-                                            //redirect to Manage Property Page
-                                            header('location:'.SITEURL_ADMIN.'manage_property.php');
-                                            ob_end_flush();
-                                            //stop the process
-                                            die();
-                                        }
-                                    }
                                 }
                                 else
                                 {
-                                    $image_name = $backgroundName; //Default Image when Image is Not Selected
+                                    $image_name = $backgroundName; //setting default value
                                 }
-                            }
-                            else
-                            {
-                                $image_name = $backgroundName; //Default Image when Button is not Clicked
                             }
                             
                             
@@ -566,10 +535,6 @@
                                     $image_name2 = $pictureName; //Default Image when Image is Not Selected
                                 }
                             }
-                            else
-                            {
-                                $image_name2 = $pictureName; //Default Image when Button is not Clicked
-                            }
                             
                             
                             
@@ -644,10 +609,6 @@
                                 {
                                     $image_name3 = $pictureName2; //Default Image when Image is Not Selected
                                 }
-                            }
-                            else
-                            {
-                                $image_name3 = $pictureName2; //Default Image when Button is not Clicked
                             }
 
 

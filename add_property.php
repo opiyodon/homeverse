@@ -47,17 +47,17 @@
 
                                 <table class="TBL_30">
                                     
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Name :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="name" placeholder="Enter Property Name">
+                                            <input type="text" class="INPUT w_50" name="name" placeholder="Enter Property Name">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Type :</td>
                                         <td>
-                                            <select name="type" id="Type" class="INPUT2">
+                                            <select name="type" id="Type" class="INPUT2 w_50">
 
                                                 <option disabled selected value="Select Type">-- Select Type --</option>
 
@@ -77,10 +77,10 @@
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Status :</td>
                                         <td>
-                                            <select name="status" id="Status" class="INPUT2">
+                                            <select name="status" id="Status" class="INPUT2 w_50">
 
                                                 <option disabled selected value="Select Status">-- Select Status --</option>
 
@@ -92,66 +92,66 @@
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">City :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="city" placeholder="Enter Property Location">
+                                            <input type="text" class="INPUT w_50" name="city" placeholder="Enter Property Location">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Select Background :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="backgroundName">
+                                            <input type="file" class="INPUT w_50" name="backgroundName">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Select Picture 1 :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="pictureName">
+                                            <input type="file" class="INPUT w_50" name="pictureName">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Select Picture 2 :</td>
                                         <td>
-                                            <input type="file" class="INPUT w-80" name="pictureName2">
+                                            <input type="file" class="INPUT w_50" name="pictureName2">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Old Price :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="oldPrice" placeholder="Enter Property Price">
+                                            <input type="number" class="INPUT w_50" name="oldPrice" placeholder="Enter Property Price">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Discount :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="discount" placeholder="Enter Property Discount">
+                                            <input type="number" class="INPUT w_50" name="discount" placeholder="Enter Property Discount">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Bedrooms :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="bedrooms" placeholder="Enter Number of Bedrooms">
+                                            <input type="number" class="INPUT w_50" name="bedrooms" placeholder="Enter Number of Bedrooms">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Bathrooms :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="bathrooms" placeholder="Enter Number of Bathrooms">
+                                            <input type="number" class="INPUT w_50" name="bathrooms" placeholder="Enter Number of Bathrooms">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Square Ft :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-80" name="squareFt" placeholder="Enter Property Square Ft">
+                                            <input type="number" class="INPUT w_50" name="squareFt" placeholder="Enter Property Square Ft">
                                         </td>
                                     </tr>
 
@@ -159,17 +159,17 @@
 
                                 <table class="TBL_30">
                                     
-                                    <tr  class=T_ROW>
+                                    <tr  class="T_ROW">
                                         <td>Description :</td>
                                     </tr>
                                     
-                                    <tr  class=T_ROW>
+                                    <tr  class="T_ROW">
                                         <td>
-                                            <textarea type="text" class="INPUT" name="description" id="" cols="30" rows="10" placeholder="Enter A Short Description of Your Property"></textarea>
+                                            <textarea type="text" class="INPUT w_80" name="description" id="" cols="30" rows="10" placeholder="Enter A Short Description of Your Property"></textarea>
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Featured :</td>
                                         <td>
                                             <div class="F_ROW">
@@ -185,31 +185,31 @@
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Owner :</td>
                                         <td>
-                                            <input type="text" class="INPUT" name="owner" placeholder="Enter Property Owner">
+                                            <input type="text" class="INPUT w_50" name="owner" placeholder="Enter Property Owner">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Phone :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="phone" placeholder="Enter Phone Number">
+                                            <input type="number" class="INPUT w_50" name="phone" placeholder="Enter Phone Number">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Whatsapp :</td>
                                         <td>
-                                            <input type="number" class="INPUT w-72" name="whatsapp" placeholder="Enter Whatsapp Number">
+                                            <input type="number" class="INPUT w_50" name="whatsapp" placeholder="Enter Whatsapp Number">
                                         </td>
                                     </tr>
 
-                                    <tr class=T_ROW>
+                                    <tr class="T_ROW">
                                         <td class="w_44">Email :</td>
                                         <td>
-                                            <input type="email" class="INPUT" name="email" placeholder="Enter Your Email">
+                                            <input type="email" class="INPUT w_50" name="email" placeholder="Enter Your Email">
                                         </td>
                                     </tr>
 
@@ -223,7 +223,7 @@
                                     
                                     <tr>
                                         <td>
-                                            <input type="submit" name="submit" value="Submit Property" class="btn">
+                                            <input type="submit" name="submit" value="Submit Property" class="btn ADD_BTN">
                                         </td>
                                     </tr>
 
@@ -263,16 +263,6 @@
                             $phone = $_POST['phone'];
                             $whatsapp = $_POST['whatsapp'];
                             $email = $_POST['email'];
-
-                            //Check whether radio button for featured and active are checked or not
-                            //if(isset($_POST['featured']))
-                            //{
-                                //$featured = $_POST['featured'];
-                            //}
-                            //else
-                            //{
-                                //$featured = "No";//setting default value
-                            //}
 
                             //2a. Upload images if selected
                             //check whether Select Image is clicked or not and upload image only if selected
@@ -316,10 +306,10 @@
                                         die();
                                     }
                                 }
-                            }
-                            else
-                            {
-                                $image_name = ""; //setting default value as blank
+                                else
+                                {
+                                    $image_name = "No-Background.jpg"; //setting default value as blank
+                                }
                             }
 
                             //2b. Upload images if selected
@@ -364,10 +354,10 @@
                                         die();
                                     }
                                 }
-                            }
-                            else
-                            {
-                                $image_name2 = ""; //setting default value as blank
+                                else
+                                {
+                                    $image_name2 = ""; //setting default value as blank
+                                }
                             }
 
                             //2b. Upload images if selected
@@ -412,10 +402,10 @@
                                         die();
                                     }
                                 }
-                            }
-                            else
-                            {
-                                $image_name3 = ""; //setting default value as blank
+                                else
+                                {
+                                    $image_name3 = ""; //setting default value as blank
+                                }
                             }
 
                             //3. SQL Query to Save the data into database

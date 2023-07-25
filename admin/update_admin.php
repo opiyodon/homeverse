@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER2">Update Admin</div>
 
@@ -62,43 +62,44 @@
                         <table class="TBL_30">
                                                         
                             <tr>
-                                <td>Full Name</td>
+                                <td class="hide_it">Full Name</td>
                                 <td>
                                     <input type="text" class="INPUT" name="full_name" value="<?php echo $full_name; ?>">
                                 </td>
                             </tr>
 
                             <tr>
-                                <td>Username</td>
+                                <td class="hide_it">Username</td>
                                 <td>
                                     <input type="text" class="INPUT" name="username" value="<?php echo $username; ?>">
                                 </td>
                             </tr>
 
                             <tr>
-                                <td>Email</td>
+                                <td class="hide_it">Email</td>
                                 <td>
                                     <input type="text" class="INPUT" name="email" value="<?php echo $email; ?>">
                                 </td>
                             </tr>
 
                             <tr>
-                                <td>Phone</td>
+                                <td class="hide_it">Phone</td>
                                 <td>
-                                    <input type="text" class="INPUT" name="phone" value="<?php echo $phone; ?>">
+                                    <input type="text" class="INPUT" name="phone" value="0<?php echo $phone; ?>">
                                 </td>
                             </tr>
 
                             <tr>
-                                <td>Admin</td>
+                                <td class="hide_it">Admin</td>
                                 <td>
+                                    <p class="hide2">Admin</p>
                                     <div class="RADIO_BOX">
                                         <div class="RADIO_BOX_ITEM">
-                                            <input type="radio" <?php if($admin=='Yes'){echo "checked";} ?> name="admin" value="<?php echo $admin; ?>">
+                                            <input type="radio" <?php if($admin=='Yes'){echo "checked";} ?> name="admin" value="Yes">
                                             <p>Yes</p>
                                         </div>
                                         <div class="RADIO_BOX_ITEM">
-                                            <input type="radio" <?php if($admin=='No'){echo "checked";} ?> name="admin" value="<?php echo $admin; ?>">
+                                            <input type="radio" <?php if($admin=='No'){echo "checked";} ?> name="admin" value="No">
                                             <p>No</p>
                                         </div>
                                     </div>

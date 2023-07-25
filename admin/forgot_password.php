@@ -47,6 +47,15 @@
                     <input type="submit" name="submit" value="Save" class="btn BTN_PRI">
                 </div>
 
+                <div>
+                    <p>
+                        Go back to login page?
+                        <a class="LOGIN_LINK_ITEM" href="<?php echo SITEURL_ADMIN; ?>login.php">
+                            Login
+                        </a>
+                    </p>
+                </div>
+
             </form>
             <!-- ResetPassword Form Ends Here -->
         

@@ -115,30 +115,30 @@
                                                 
                                                 <fieldset>
                                                     <legend>User Details</legend>
-                                                    <table class="TBL_30">
+                                                    <table class="PROFILE_ROW2">
                                     
                                                         <tr class=T_ROW>
-                                                            <td class="w_44">New Password :</td>
+                                                            <td class="w_44 hide_it">New Password :</td>
                                                             <td>
-                                                                <input type="password" class="INPUT" name="password1" placeholder="Enter New Password">
+                                                                <input type="password" class="INPUT w_50" name="password1" placeholder="Enter New Password">
                                                             </td>
                                                         </tr>
 
                                                         <tr class=T_ROW>
-                                                            <td class="w_44">Confirm New Password :</td>
+                                                            <td class="w_44 hide_it">Confirm Password :</td>
                                                             <td>
-                                                                <input type="password" class="INPUT" name="password" placeholder="Confirm New Password">
+                                                                <input type="password" class="INPUT w_50" name="password" placeholder="Confirm New Password">
                                                             </td>
                                                         </tr>
 
                                                     </table>
 
-                                                    <table class="TBL_30">
+                                                    <table class="PROFILE_ROW2">
                                     
                                                         <tr class=T_ROW>
-                                                            <td class="w_44">Change Profile :</td>
+                                                            <td class="w_44 hide_it">Change Profile :</td>
                                                             <td>
-                                                                <input class="INPUT" type="file" name="userProfile">
+                                                                <input class="INPUT w_50" type="file" name="userProfile">
                                                             </td>
                                                         </tr>
 

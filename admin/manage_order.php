@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER">Manage Order</div>
 

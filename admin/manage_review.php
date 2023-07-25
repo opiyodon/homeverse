@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER">Manage Review</div>
 
@@ -69,7 +69,6 @@
                                         $id=$rows['id'];
                                         $property_id=$rows['property_id'];
                                         $username=$rows['username'];
-                                        $profileName=$rows['profileName'];
                                         $review=$rows['review'];
                                         $active=$rows['active'];
 
@@ -80,29 +79,64 @@
                                                 <td class="text_center"><?php echo $sn++ ?>.</td>
                                                 <td class="text_center"><?php echo $username ?></td>
 
-                                                <td class="text_center">
+                                                <?php
+                                                //query to get all admin
+                                                $sql5 = "SELECT userProfile FROM user";
+                                                //execute the query
+                                                $res5 = mysqli_query($conn, $sql5);
 
-                                                    <?php
+                                                //check whether the query is executed or not
+                                                if($res5==TRUE)
+                                                {
+                                                    //Count rows to check whether we have data in database or not
+                                                    $count5 = mysqli_num_rows($res5);//function to get all rows in the database
 
-                                                        //check whether image is availabele or not
-                                                        if($profileName!="")
+                                                    //check the num of rows
+                                                    if($count5>0)
+                                                    {
+                                                        //we have data in database
+                                                        while($rows5=mysqli_fetch_assoc($res5))
                                                         {
-                                                            //display image
+                                                            //using while loop to get all the data from database
+                                                            //and while loop will run as long as theres data in database
+
+                                                            //get individual data
+                                                            $userProfile=$rows5['userProfile'];
+
+                                                            //displaying the values in our table
                                                             ?>
 
-                                                            <img src="../images/user/profileName/<?php echo $profileName ?>" class="PROP_IMG">
+                                                                <td class="text_center">
 
-                                                            <?php
+                                                                    <?php
+
+                                                                        //check whether image is availabele or not
+                                                                        if($userProfile!="")
+                                                                        {
+                                                                            //display image
+                                                                            ?>
+
+                                                                            <img src="../images/user/userProfile/<?php echo $userProfile ?>" class="PROP_IMG">
+
+                                                                            <?php
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            //display message
+                                                                            echo "<div class='ERROR'>Image Not Added</div>";
+                                                                        }
+
+                                                                    ?>
+
+                                                                </td>
+
+                                                                        
+
+                                                <?php 
+                                                            }
                                                         }
-                                                        else
-                                                        {
-                                                            //display message
-                                                            echo "<div class='ERROR'>Image Not Added</div>";
-                                                        }
-                                                    
-                                                    ?>
-                                                    
-                                                </td>
+                                                    }
+                                                ?>
                                                 
                                                 <td class="text_center"><?php echo $property_id ?></td>
                                                 <td class="text_center"><?php echo $active ?></td>

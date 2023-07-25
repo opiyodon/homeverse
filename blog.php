@@ -26,7 +26,7 @@
         </div>
     </a>
 
-    <div class="CARD_BOX">
+    <div class="CARD_BOX2">
 
                 <?php
                     //query to get all admin
@@ -57,7 +57,7 @@
                                 $type=$rows2['type'];
                                 $backgroundName=$rows2['backgroundName'];
                                 $comment=$rows2['comment'];
-                                $date=$rows2['date'];
+                                $dates=$rows2['dates'];
                                 $featured_blog=$rows2['featured_blog'];
                                 $active_blog=$rows2['active_blog'];
 
@@ -121,7 +121,7 @@
                             
                                                         </div>
                             
-                                                        <p class="HOV_RED"><?php echo $date ?></p>
+                                                        <p class="HOV_RED"><?php echo $dates ?></p>
                             
                                                     </div>
 

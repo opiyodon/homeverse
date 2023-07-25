@@ -1,4 +1,4 @@
-<?php include('partials/nav.php'); ?>
+php include('partials/nav.php'); ?>
 
 <!--===========================================================SELECTED PROPERTY SECTION START====================================================-->
 <section id="Selected_Property">

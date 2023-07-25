@@ -4,9 +4,9 @@
         <div class="Footer">
     
             <p>
-                &copy;2022 All rights reserved, Homverse. Developed By - 
+                &copy;2023 All rights reserved, Homeverse. Developed By - 
                 <a href="">
-                    Artkins
+                    Katelina
                 </a>
             </p>
         

@@ -9,7 +9,20 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="DARK_MODE">
+
+
+<div id="pre_loader" class="pre_loader">
+    <div class="loader">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <span class="loading">Homeverse</span>
+    </div>
+</div>
+
+<div id="SECTIONS" class="SECTIONS hidden">
+
     <div class="login">
         <!-- Login Form Starts Here -->
         <form action="" method="POST" class="MyLoginForm">
@@ -62,6 +75,8 @@
         <!-- Login Form Ends Here -->
     </div>
 
+</div>
+
     <!--===========================================================JS FILES====================================================-->
 
     <script src="https://kit.fontawesome.com/2820328d2c.js" crossorigin="anonymous"></script>
@@ -76,12 +91,6 @@
     <script src="js/script.js"></script>
 
     <!--=========================MAIN JS=========================-->
-
-    <!--=========================EMAIL JS=========================-->
-
-    <script src="../js/email.js" data-cfasync="false" type="text/javascript"></script>
-
-    <!--=========================EMAIL JS=========================-->
 
 </body>
 </html>
@@ -112,13 +121,13 @@ if (isset($_POST['submit'])) {
         $_SESSION['user_id'] = $user_id; // Store the user_id in the session
 
         // Redirect to Manage Admin Page
-        header('location:' . SITEURL_USER . 'index.php');
+        header('location:'.SITEURL_USER.'index.php');
         ob_end_flush();
     } else {
         // Failed to login
         $_SESSION['login'] = "<div class='ERROR'>Username and Password<br>did not match</div>";
         // Redirect back to login page
-        header('location:' . SITEURL_USER . 'login.php');
+        header('location:'.SITEURL_USER.'login.php');
         ob_end_flush();
     }
 }

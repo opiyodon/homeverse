@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <div class="CARD_BOX">
+        <div class="CARD_BOX1">
 
             <div class="Card">
 
@@ -146,32 +146,16 @@
                     <div class="ROW">
                         <div class="Card2">
 
-                            <div class="CIRCLE1">
-                                1
-                            </div>
+                            <div class="MERGE">
 
-                            <div class="CIRCLE2">
-                                <img src="images/review.png" alt="Discussion" class="Card_img2">
-                            </div>
+                                <div class="CIRCLE1">
+                                    1
+                                </div>
 
-                            <div class="LINE_DOTS">
-                                <p>............................................................</p>
-                            </div>
+                                <div class="CIRCLE2">
+                                    <img src="images/review.png" alt="Discussion" class="Card_img2">
+                                </div>
 
-                            <div class="CIRCLE3">
-                                <p></p>
-                            </div>
-                            
-                        </div>
-
-                        <div class="Card2">
-
-                            <div class="CIRCLE1">
-                                2
-                            </div>
-
-                            <div class="CIRCLE2">
-                                <img src="images/review.png" alt="File Review" class="Card_img2">
                             </div>
 
                             <div class="LINE_DOTS">
@@ -186,12 +170,40 @@
 
                         <div class="Card2">
 
-                            <div class="CIRCLE1">
-                                3
+                            <div class="MERGE">
+
+                                <div class="CIRCLE1">
+                                    2
+                                </div>
+
+                                <div class="CIRCLE2">
+                                    <img src="images/review.png" alt="File Review" class="Card_img2">
+                                </div>
+
                             </div>
 
-                            <div class="CIRCLE2">
-                                <img src="images/acquire.png" alt="Acquire" class="Card_img2">
+                            <div class="LINE_DOTS">
+                                <p>............................................................</p>
+                            </div>
+
+                            <div class="CIRCLE3">
+                                <p></p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="Card2">
+
+                            <div class="MERGE">
+
+                                <div class="CIRCLE1">
+                                    3
+                                </div>
+
+                                <div class="CIRCLE2">
+                                    <img src="images/acquire.png" alt="Acquire" class="Card_img2">
+                                </div>
+
                             </div>
                             
                         </div>

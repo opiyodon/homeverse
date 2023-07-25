@@ -11,7 +11,7 @@
         comment = '',
         featured_blog = '',
         active_blog = '',
-        date = '',
+        dates = '00/00/0000',
         blog = 'No'
         WHERE id=$id
     ";

@@ -24,6 +24,12 @@
                 echo $_SESSION['order']; //displaying session message
                 unset($_SESSION['order']); //removing session message
             }
+
+            if(isset($_SESSION['add'])) //checking wether session message is set or not
+            {
+                echo $_SESSION['add']; //displaying session message
+                unset($_SESSION['add']); //removing session message
+            }
         ?>
 
         <a class="HIDE" href="<?php echo SITEURL_USER; ?>property.php">
@@ -34,7 +40,7 @@
             </div>
         </a>
 
-        <div class="CARD_BOX">
+        <div class="CARD_BOX2">
 
 
                 <?php

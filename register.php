@@ -1,4 +1,4 @@
-<?php include('../config/constants.php'); ?>
+<?php include('config/constants.php'); ?>
 <!DOCTYPE html>
 
 <html>
@@ -12,8 +12,19 @@
         <link  href="css/style.css"  type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
-    
-    <body>
+<body class="DARK_MODE">
+
+
+<div id="pre_loader" class="pre_loader">
+    <div class="loader">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <span class="loading">Homeverse</span>
+    </div>
+</div>
+
+<div id="SECTIONS" class="SECTIONS hidden">
         
     <div class="register">
             
@@ -40,7 +51,7 @@
                 </div>
                 
                 <div>
-                    <input required class="INPUT" type="text" name="phone" placeholder="Enter Phone...">
+                    <input required class="INPUT" type="number" name="phone" placeholder="Enter Phone...">
                 </div>
                 
                 <div>
@@ -50,10 +61,10 @@
                 <div>
                     <input type="submit" name="submit" value="Register" class="btn">
                 </div>
-                
+
                 <div>
                     <p>
-                        Already have an a account? 
+                        Already have an account?
                         <a class="LOGIN_LINK_ITEM" href="<?php echo SITEURL_USER; ?>login.php">
                             Login
                         </a>
@@ -66,6 +77,8 @@
 
     </div>
 
+</div>
+
 
 
         <!--===========================================================JS FILES====================================================-->
@@ -77,15 +90,9 @@
 
         <!--=========================MAIN JS=========================-->
 
-        <script src="../js/script.js"></script>
+        <script src="js/script.js"></script>
 
         <!--=========================MAIN JS=========================-->
-
-        <!--=========================EMAIL JS=========================-->
-
-        <script src="../js/email.js" data-cfasync="false" type="text/javascript"></script>
-
-        <!--=========================EMAIL JS=========================-->
 
 
 
@@ -152,10 +159,10 @@
                         die();
                     }
                 }
-            }
-            else
-            {
-                $image_name = "No-Profile.jpg"; //setting default value
+                else
+                {
+                    $image_name = "No-Profile.jpg"; //setting default value
+                }
             }
 
             //3. SQL Query to Save the data into database

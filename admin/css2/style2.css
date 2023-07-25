@@ -641,11 +641,6 @@ ul li a:hover{
   margin-top: -24px;
 }
 
-.PROFILE .ROW{
-  display: flex;
-  justify-content: center;
-}
-
 .SECTION_TITLE{
   font-size: 20px;
   display: flex;
@@ -655,6 +650,17 @@ ul li a:hover{
   border-radius: 80px;
   background: var(--primary3);
   color: var(--primary);
+}
+
+.BTN_ROW{
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.PROFILE .ROW{
+  display: flex;
+  justify-content: center;
 }
 
 .PROFILE_CARD_BOX{
@@ -676,19 +682,6 @@ ul li a:hover{
 .profileform{
   width: 50%;
   margin: 0 auto;
-}
-
-fieldset{
-  border: 2px solid var(--primary);
-  border-radius: 10px;
-  padding: 10px 30px;
-}
-
-legend{
-  margin-left: 20px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .PROFILE_CARD_ROW{
@@ -736,6 +729,19 @@ legend{
 .profile_email p{
   font-size: 20px;
   color: red;
+}
+
+fieldset{
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+legend{
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 
@@ -818,10 +824,13 @@ td{
   justify-content: center;
 }
 
-.TBL_30{
-  width: 50%;
+.INPUT_ROW{
   display: flex;
-  justify-content: center;
+  gap: 10px;
+}
+
+.w_44{
+  width: 150px;
 }
 
 .INPUT{
@@ -861,6 +870,10 @@ td{
 .RADIO_BOX_ITEM{
   display: flex;
   gap: 5px;
+}
+
+.hide2{
+  display: none;
 }
 
 
@@ -926,19 +939,27 @@ td{
   gap: 10px;
 }
 
-.w_402{
-  width: 50%;
-}
-
 .ROW_BOX{
   display: flex;
   gap: 80px;
 }
 
+.TBL_30{
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
 .T_ROW{
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 10px 0px;
+}
+
+.F_ROW{
+  display: flex;
+  gap: 50px;
 }
 
 
@@ -1069,6 +1090,10 @@ td{
 /*MOBILE PHONES*/
 @media screen and (max-width: 640px) {
   nav{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
@@ -1081,25 +1106,51 @@ td{
   }
       
   menu ul{
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 80%;
-    top: 70px;
+    top: 0px;
     right: 0px;
     bottom: 0px;
     background-color: var(--black);
     display: flex;
     justify-items: center;
     flex-direction: column;
-    padding: 20px;
-    padding-bottom: 150px;
+    padding: 150px 20px;
+    z-index: 1000;
   }
 
-  .NAV_TOGGLER{
-    display: block;
+  .CLOSE_BTN_BOX{
+    display: flex;
     cursor: pointer;
-    align-items: center;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 50px;
+  }
+
+  .CLOSE_BTN{
+    display: flex;
+    text-align: center;
     justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+    border: 3px solid var(--primary);
+    background: var(--white);
+    color: var(--black);
+  }  
+
+  .NAV_TOGGLER{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 80px;
+    border: 3px solid var(--primary);
+    background: var(--white);
   }  
 
   .NAV_TOGGLER_CLOSE{
@@ -1110,10 +1161,28 @@ td{
     font-size: 20px;
     display: inline-block;
     position: relative;
+    z-index: 100;
+  }
+
+  .NAV_TOGGLER span i{
+    color: var(--black);
   }
       
   menu ul li a{
     font-size: 20px;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: -120px;
+    right: 0;
+    background-color: var(--black);
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px 30px;
+    box-shadow: 0px 8px 16px 0px var(--white);
+    z-index: 10000;
   }
 
 
@@ -1123,19 +1192,21 @@ td{
   ==================================================================================================================== */
   .MAIN_CONTENT{
     min-height: 70vh;
+    padding: 20px 10px;
+    width: 100%;
   }
 
-  .MAIN_CONTENT .ROW{
+  .MAIN_CONTENT .ROW2{
     overflow-x: scroll;
   }
-
+  
   .DASH_BOX{
     display: flex;
     flex-direction: column;
   }
 
   .COL_4{
-    width: 255px;
+    width: 100%;
   }
 
   .btn{
@@ -1147,16 +1218,94 @@ td{
   }
 
 
+  /* ====================================================================================================================
+  ================================  PROFILE PAGE  ==============================================================
+  ==================================================================================================================== */
+  .PROFILE_CARD_BOX{
+    margin-left: -90px;
+    width: 300px;
+  }
+
+  .PROFILE_ROW1{
+    flex-direction: column;
+  }
+
+  .PROFILE_ROW2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hide_it{
+    display: none;
+  }
+
+
 
   /* ====================================================================================================================
   ================================  MANAGE ADMIN PAGE  ==============================================================
   ==================================================================================================================== */
   .TH{
-    padding: 0px 30px;
+    padding: 10px 30px;
   }
 
   td{
-    padding: 0px 30px;
+    padding: 10px 30px;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  UPDATE ADMIN PAGE  ==============================================================
+  ==================================================================================================================== */
+  .hide2{
+    display: flex;
+    padding: 10px 0px;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  ADD BLOG PAGE  ==============================================================
+  ==================================================================================================================== */
+  .TBL_BOX{
+    flex-direction: column;
+  }
+
+
+
+  /* ====================================================================================================================
+  ================================  UPDATE PROPERTY PAGE  ==============================================================
+  ==================================================================================================================== */
+  .HEADER2{
+    padding: 20px 0px;
+  }
+  
+  .ADD_P_FORM{
+    flex-direction: column;
+  }
+  
+  .ROW_BOX{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .T_ROW{
+    display: flex;
+    gap: 20px;
+    padding: 10px 0px;
+  }
+  
+  .w_44{
+    width: 110px;
+  }
+  
+  .w_50{
+    width: 210px;
+  }
+  
+  .w_80{
+    width: 320px;
   }
 
 

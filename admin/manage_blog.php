@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER">Manage Blog</div>
 
@@ -101,7 +101,7 @@
                                         $featured_blog=$rows['featured_blog'];
                                         $active_blog=$rows['active_blog'];
                                         $comment=$rows['comment'];
-                                        $date=$rows['date'];
+                                        $dates=$rows['dates'];
 
                                         //displaying the values in our table
                                         ?>

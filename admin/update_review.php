@@ -140,7 +140,7 @@
                                     
                                     <tr >
                                         <td>
-                                            <textarea type="text" class="INPUT" name="review" id="" cols="30" rows="10"><?php echo $review ?></textarea>
+                                            <textarea type="text" class="INPUT w_80" name="review" id="" cols="30" rows="10"><?php echo $review ?></textarea>
                                         </td>
                                     </tr>
 

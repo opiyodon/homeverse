@@ -47,7 +47,7 @@
                                 $featured_blog=$row2['featured_blog'];
                                 $active_blog=$row2['active_blog'];
                                 $comment=$row2['comment'];
-                                $date=$row2['date'];
+                                $dates=$row2['dates'];
                             }
                             else
                             {
@@ -134,7 +134,7 @@
                                     <tr>
                                         <td class="w_44">Date :</td>
                                         <td>
-                                            <input type="date" class="INPUT" name="date" value="<?php echo $date ?>">
+                                            <input type="date" class="INPUT" name="dates" value="<?php echo $dates ?>">
                                         </td>
                                     </tr>
 
@@ -149,7 +149,7 @@
                                     
                                     <tr >
                                         <td>
-                                            <textarea type="text" class="INPUT" name="comment" id="" cols="30" rows="10"><?php echo $comment ?></textarea>
+                                            <textarea type="text" class="INPUT w_80" name="comment" id="" cols="30" rows="10"><?php echo $comment ?></textarea>
                                         </td>
                                     </tr>
 
@@ -190,7 +190,7 @@
                             //1. Get the data from Form
                             $comment = $_POST['comment'];
                             $featured_blog = $_POST['featured_blog'];
-                            $date = $_POST['date'];
+                            $dates = $_POST['dates'];
 
                             //2. SQL Query to Save the data into database
                             //for numerical values we do not need to pass value inside quotes "" but for string values it is compulsory
@@ -198,7 +198,7 @@
                                 comment = '$comment',
                                 featured_blog = '$featured_blog',
                                 active_blog = 'Yes',
-                                date = '$date',
+                                dates = '$dates',
                                 blog = 'Yes'
                                 WHERE id=$id
                             ";

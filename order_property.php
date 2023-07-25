@@ -121,22 +121,22 @@
                                                     <legend>Order Details</legend>
                                                     <table class="TBL_30">
                                     
-                                                        <tr class=T_ROW>
-                                                            <td class="w_44">Full Name :</td>
+                                                        <tr class="T_ROW">
+                                                            <td class="w_44 hide_it">Full Name :</td>
                                                             <td>
                                                                 <input type="text" class="INPUT" name="full_name" placeholder="Enter Full Name">
                                                             </td>
                                                         </tr>
 
-                                                        <tr class=T_ROW>
-                                                            <td class="w_44">Phone :</td>
+                                                        <tr class="T_ROW">
+                                                            <td class="w_44 hide_it">Phone :</td>
                                                             <td>
                                                                 <input type="number" class="INPUT" name="phone" placeholder="Enter Phone Number">
                                                             </td>
                                                         </tr>
 
-                                                        <tr class=T_ROW>
-                                                            <td class="w_44">Email :</td>
+                                                        <tr class="T_ROW">
+                                                            <td class="w_44 hide_it">Email :</td>
                                                             <td>
                                                                 <input type="email" class="INPUT" name="email" placeholder="Enter Your Email">
                                                             </td>

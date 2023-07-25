@@ -22,7 +22,7 @@
             </p>
         </div>
 
-        <div class="CARD_BOX">
+        <div class="CARD_BOX2">
 
 
                 <?php

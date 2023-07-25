@@ -1,4 +1,4 @@
-<?php include('../config/constants.php'); ?>
+<?php include('config/constants.php'); ?>
 <!DOCTYPE html>
 
 <html>
@@ -47,6 +47,15 @@
                     <input type="submit" name="submit" value="Save" class="btn">
                 </div>
 
+                <div>
+                    <p>
+                        Go back to login page?
+                        <a class="LOGIN_LINK_ITEM" href="<?php echo SITEURL_USER; ?>login.php">
+                            Login
+                        </a>
+                    </p>
+                </div>
+
             </form>
             <!-- ResetPassword Form Ends Here -->
         
@@ -64,15 +73,9 @@
 
         <!--=========================MAIN JS=========================-->
 
-        <script src="../js/script.js"></script>
+        <script src="js/script.js"></script>
 
         <!--=========================MAIN JS=========================-->
-
-        <!--=========================EMAIL JS=========================-->
-
-        <script src="../js/email.js" data-cfasync="false" type="text/javascript"></script>
-
-        <!--=========================EMAIL JS=========================-->
 
 
 

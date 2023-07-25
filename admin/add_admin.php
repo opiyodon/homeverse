@@ -7,7 +7,7 @@
 
             <div class="MAIN_CONTENT">
 
-                <div class="ROW">
+                <div class="ROW2">
 
                     <div class="HEADER2">Add Admin</div>
 
@@ -21,50 +21,58 @@
 
                     <form action="" method="POST" class="form_center">
 
-                        <table class="TBL_30">
-                            
-                            <tr>
-                                <td>Full Name</td>
-                                <td>
-                                    <input type="text" class="INPUT" name="full_name" placeholder="Enter Full Name">
-                                </td>
-                            </tr>
+                        <div class="TBL">
 
-                            <tr>
-                                <td>Username</td>
-                                <td>
-                                    <input type="text" class="INPUT" name="username" placeholder="Enter Username">
-                                </td>
-                            </tr>
+                            <div class="TBL_BOX">
 
-                            <tr>
-                                <td>Email</td>
-                                <td>
-                                    <input type="text" class="INPUT" name="email" placeholder="Enter Email">
-                                </td>
-                            </tr>
+                                <table class="TBL_30">
+                                    
+                                    <tr>
+                                        <td class="hide_it">Full Name</td>
+                                        <td>
+                                            <input type="text" class="INPUT" name="full_name" placeholder="Enter Full Name">
+                                        </td>
+                                    </tr>
 
-                            <tr>
-                                <td>Phone</td>
-                                <td>
-                                    <input type="text" class="INPUT" name="phone" placeholder="Enter Phone">
-                                </td>
-                            </tr>
+                                    <tr>
+                                        <td class="hide_it">Username</td>
+                                        <td>
+                                            <input type="text" class="INPUT" name="username" placeholder="Enter Username">
+                                        </td>
+                                    </tr>
 
-                            <tr>
-                                <td>Password</td>
-                                <td>
-                                    <input type="password" class="INPUT" name="password" placeholder="Enter Password">
-                                </td>
-                            </tr>
+                                    <tr>
+                                        <td class="hide_it">Email</td>
+                                        <td>
+                                            <input type="text" class="INPUT" name="email" placeholder="Enter Email">
+                                        </td>
+                                    </tr>
 
-                            <tr>
-                                <td>
-                                    <input type="submit" name="submit" value="Add Admin" class="btn BTN_PRI">
-                                </td>
-                            </tr>
+                                    <tr>
+                                        <td class="hide_it">Phone</td>
+                                        <td>
+                                            <input type="text" class="INPUT" name="phone" placeholder="Enter Phone">
+                                        </td>
+                                    </tr>
 
-                        </table>
+                                    <tr>
+                                        <td class="hide_it">Password</td>
+                                        <td>
+                                            <input type="password" class="INPUT" name="password" placeholder="Enter Password">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <input type="submit" name="submit" value="Add Admin" class="btn BTN_PRI">
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                        </div>
 
                     </form>
                     
@@ -100,6 +108,7 @@
             $sql = "INSERT INTO user SET
                 full_name = '$full_name',
                 username = '$username',
+                userProfile = 'No-Profile.jpg',
                 email = '$email',
                 phone = '$phone',
                 password = '$password',

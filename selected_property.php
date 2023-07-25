@@ -230,25 +230,25 @@
                                                                 $p_id=$_GET['id'];
                                                                 
                                                                 //query to get all admin
-                                                                $sql = "SELECT * FROM reviews WHERE property_id=$p_id ORDER BY id DESC";
+                                                                $sql1 = "SELECT * FROM reviews WHERE property_id=$p_id ORDER BY id DESC";
                                                                 //execute the query
-                                                                $res = mysqli_query($conn, $sql);
+                                                                $res1 = mysqli_query($conn, $sql1);
 
                                                                 //check whether the query is executed or not
-                                                                if($res==TRUE)
+                                                                if($res1==TRUE)
                                                                 {
                                                                     //Count rows to check whether we have data in database or not
-                                                                    $count = mysqli_num_rows($res);//function to get all rows in the database
+                                                                    $count1 = mysqli_num_rows($res1);//function to get all rows in the database
 
                                                                     //check the num of rows
-                                                                    if($count>0)
+                                                                    if($count1>0)
                                                                     {
                                                                         //we have data in database
 
                                                                             //displaying the values in our card
                                                                             ?>
 
-                                                                                <p>Reviews(<?php echo $count ?>)</p>
+                                                                                <p>Reviews(<?php echo $count1 ?>)</p>
 
                                                                             <?php
 
@@ -327,32 +327,31 @@
                                                         $p_id=$_GET['id'];
                                                         
                                                         //query to get all admin
-                                                        $sql = "SELECT * FROM reviews WHERE property_id=$p_id ORDER BY id DESC";
+                                                        $sql2 = "SELECT * FROM reviews WHERE property_id=$p_id ORDER BY id DESC";
                                                         //execute the query
-                                                        $res = mysqli_query($conn, $sql);
+                                                        $res2 = mysqli_query($conn, $sql2);
 
                                                         //check whether the query is executed or not
-                                                        if($res==TRUE)
+                                                        if($res2==TRUE)
                                                         {
                                                             //Count rows to check whether we have data in database or not
-                                                            $count = mysqli_num_rows($res);//function to get all rows in the database
+                                                            $count2 = mysqli_num_rows($res2);//function to get all rows in the database
 
                                                             $sn=1;//create a variable and assign the value
 
                                                             //check the num of rows
-                                                            if($count>0)
+                                                            if($count2>0)
                                                             {
                                                                 //we have data in database
-                                                                while($rows=mysqli_fetch_assoc($res))
+                                                                while($rows2=mysqli_fetch_assoc($res2))
                                                                 {
                                                                     //using while loop to get all the data from database
                                                                     //and while loop will run as long as theres data in database
 
                                                                     //get individual data
-                                                                    $username=$rows['username'];
-                                                                    $profileName=$rows['profileName'];
-                                                                    $review=$rows['review'];
-                                                                    $active=$rows['active'];
+                                                                    $username=$rows2['username'];
+                                                                    $review=$rows2['review'];
+                                                                    $active=$rows2['active'];
 
                                                                     //displaying the values in our card
                                                                     ?>
@@ -361,27 +360,66 @@
                                                                             <div class="REVIEW_CARD_ITEM">
 
                                                                                 <div class="REVIEW_ROW">
-                                                                                    <div class="PIC w-10">
-                                                                                        <?php
 
-                                                                                            //check whether image is availabele or not
-                                                                                            if($profileName!="")
+                                                                                <?php
+                
+                                                                                    $username=$rows2['username'];
+                                                                                    //query to get all admin
+                                                                                    $sql5 = "SELECT userProfile FROM user";
+                                                                                    //execute the query
+                                                                                    $res5 = mysqli_query($conn, $sql5);
+
+                                                                                    //check whether the query is executed or not
+                                                                                    if($res5==TRUE)
+                                                                                    {
+                                                                                        //Count rows to check whether we have data in database or not
+                                                                                        $count5 = mysqli_num_rows($res5);//function to get all rows in the database
+
+                                                                                        //check the num of rows
+                                                                                        if($count5>0)
+                                                                                        {
+                                                                                            //we have data in database
+                                                                                            while($rows5=mysqli_fetch_assoc($res5))
                                                                                             {
-                                                                                                //display image
+                                                                                                //using while loop to get all the data from database
+                                                                                                //and while loop will run as long as theres data in database
+
+                                                                                                //get individual data
+                                                                                                $userProfile=$rows5['userProfile'];
+
+                                                                                                //displaying the values in our table
                                                                                                 ?>
 
-                                                                                                    <img src="images/user/profileName/<?php echo $profileName ?>" alt="<?php echo $username ?>">
+                                                                                                    <div class="PIC w-10">
+                                                                                                        <?php
 
-                                                                                                <?php
-                                                                                            }
-                                                                                            else
-                                                                                            {
-                                                                                                //display message
-                                                                                                echo "<div class='ERROR'>Image Not Added</div>";
-                                                                                            }
+                                                                                                            //check whether image is availabele or not
+                                                                                                            if($userProfile!="")
+                                                                                                            {
+                                                                                                                //display image
+                                                                                                                ?>
 
-                                                                                        ?>
-                                                                                    </div>
+                                                                                                                    <img src="images/user/userProfile/<?php echo $userProfile ?>" alt="<?php echo $userProfile ?>">
+
+                                                                                                                <?php
+                                                                                                            }
+                                                                                                            else
+                                                                                                            {
+                                                                                                                //display message
+                                                                                                                echo "<div class='ERROR'>Image Not Added</div>";
+                                                                                                            }
+
+                                                                                                        ?>
+                                                                                                    </div>
+
+                                                                                                            
+
+                                                                                    <?php 
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    ?>
+                                                                                    
                                                                                     <div class="NAME">
                                                                                         <p><?php echo $username ?></p>
                                                                                     </div>
@@ -426,23 +464,16 @@
                                                             <table class="ADD_REVIEW_TABLE">
                                                                 
                                                                 <tr class="REVIEW_TABLE_ITEMS">
-                                                                    <td>Username :</td>
+                                                                    <td class="w_44">Username :</td>
                                                                     <td>
-                                                                        <input type="text" class="INPUT2" name="username" placeholder="Enter Your Username">
+                                                                        <input type="text" class="INPUT2 w_50" name="username" placeholder="Enter Your Username">
                                                                     </td>
                                                                 </tr>
 
                                                                 <tr class="REVIEW_TABLE_ITEMS">
-                                                                    <td>Picture :</td>
+                                                                    <td class="w_44">Review :</td>
                                                                     <td>
-                                                                        <input type="file" class="INPUT2" name="profileName">
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr class="REVIEW_TABLE_ITEMS">
-                                                                    <td>Review :</td>
-                                                                    <td>
-                                                                        <textarea type="text" class="INPUT2" name="review" placeholder="Enter Your Review Here..."></textarea>
+                                                                        <textarea type="text" class="INPUT2 w_50" name="review" placeholder="Enter Your Review Here..."></textarea>
                                                                     </td>
                                                                 </tr>
 
@@ -469,77 +500,25 @@
                                                                 //1. Get the data from Form
                                                                 $username = $_POST['username'];
                                                                 $review = $_POST['review'];
-
-                                                                //2a. Upload images if selected
-                                                                //check whether Select Image is clicked or not and upload image only if selected
-                                                                if(isset($_FILES['profileName']['name']))
-                                                                {
-                                                                    //get the details of the selected image
-                                                                    $image_name = $_FILES['profileName']['name'];
-
-                                                                    //check whether the image is selected or not and upload image only if selected
-                                                                    if($image_name!="")
-                                                                    {
-                                                                        //image is selected
-                                                                        //A.REname the image
-                                                                        //get the extension of selected image
-                                                                        $ext = end(explode('.', $image_name));
-
-                                                                        //create new name for image
-                                                                        $image_name = "Profile-Name-".rand(0000,9999).".".$ext; //new image name may be "Profile-Name-8462.jpg"
-
-                                                                        //B.UPload the image
-                                                                        //get the SRC path and Destination path
-
-                                                                        //Source path is the current location of image to be uploaded
-                                                                        $src = $_FILES['profileName']['tmp_name'];
-
-                                                                        //Destination path is the location uploaded image will be stored
-                                                                        $dst = "images/user/profileName/".$image_name;
-
-                                                                        //finally upload the image
-                                                                        $upload = move_uploaded_file($src, $dst);
-
-                                                                        //check whether image uploaded or not
-                                                                        if($upload==false)
-                                                                        {
-                                                                            //failed to upload the image
-                                                                            //redirect to home page with error
-                                                                            $_SESSION['upload'] = "<div class='ERROR'>Failed to Upload Image</div>";
-                                                                            header('location:'.SITEURL_USER.'property.php');
-                                                                            ob_end_flush();
-                                                                            //stop the process
-                                                                            die();
-                                                                        }
-                                                                    }
-                                                                }
-                                                                else
-                                                                {
-                                                                    $image_name = ""; //setting default value as blank
-                                                                }
-
-                                                                //get property id
-                                                                $p_id=$_GET['id'];
                                                                 
                                                                 //3. SQL Query to Save the data into database
                                                                 //for numerical values we do not need to pass value inside quotes "" but for string values it is compulsory
-                                                                $sql = "INSERT INTO reviews SET
+                                                                $sql3 = "INSERT INTO reviews SET
                                                                     property_id = '$p_id',
                                                                     username = '$username',
-                                                                    profileName = '$image_name',
                                                                     review = '$review',
                                                                     active = 'Yes'
                                                                 ";
 
                                                                 //4. Executing query and inserting data into database
-                                                                $res = mysqli_query($conn, $sql);
+                                                                $res3 = mysqli_query($conn, $sql3);
 
                                                                 //5. Check whether the (query is executed) data is inserted or not and display approriate message
-                                                                if($res==TRUE)
+                                                                if($res3==TRUE)
                                                                     {
-                                                                        //Property Submitted
+                                                                        //Review Submitted
                                                                         //create session message variable to display message
-                                                                        $_SESSION['add'] = "<div class='SUCCESS flex justify-start'>Property Submitted Successfully</div>";
+                                                                        $_SESSION['add'] = "<div class='SUCCESS'>Review Submitted Successfully</div>";
                                                                         //redirect to Manage Admin Page
                                                                         header('location:'.SITEURL_USER.'property.php');
                                                                         ob_end_flush();
@@ -548,7 +527,7 @@
                                                                     {
                                                                         //failed to add Admin
                                                                         //create session message variable to display message
-                                                                        $_SESSION['add'] = "<div class='ERROR flex justify-start'>Failed to Submit Property</div>";
+                                                                        $_SESSION['add'] = "<div class='ERROR'>Failed to Submit Review</div>";
                                                                         //redirect to Manage Admin Page
                                                                         header('location:'.SITEURL_USER.'property.php');
                                                                         ob_end_flush();
@@ -663,7 +642,7 @@
                                             </section>
 
                                             <div class="BTN_ROW">
-                                                <a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>&name=<?php echo $name; ?>" class="btn2">Submit</a>
+                                                <a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>&name=<?php echo $name; ?>" class="btn2">Order</a>
                                             </div>
                                             
                                         </div>

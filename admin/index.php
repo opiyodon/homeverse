@@ -17,6 +17,18 @@
                             echo $_SESSION['login2']; //displaying session message
                             unset($_SESSION['login2']); //removing session message
                         }
+
+                        if(isset($_SESSION['upload'])) //checking wether session message is set or not
+                        {
+                            echo $_SESSION['upload']; //displaying session message
+                            unset($_SESSION['upload']); //removing session message
+                        }
+
+                        if(isset($_SESSION['profile'])) //checking wether session message is set or not
+                        {
+                            echo $_SESSION['profile']; //displaying session message
+                            unset($_SESSION['profile']); //removing session message
+                        }
                     ?>
 
                     <div class="DASH_BOX">
@@ -79,7 +91,7 @@
 
                             <?php 
                                 //Sql Query 
-                                $sql2 = "SELECT * FROM orders";
+                                $sql2 = "SELECT * FROM orders WHERE status='Bought'";
                                 //Execute Query
                                 $res2 = mysqli_query($conn, $sql2);
                                 //Count Rows

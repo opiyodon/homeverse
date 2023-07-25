@@ -56,6 +56,7 @@
                                 $userProfile=$rows['userProfile'];
                                 $email=$rows['email'];
                                 $phone=$rows['phone'];
+                                $password2=$rows['password'];
 
                                 //displaying the values in our table
                                 ?>
@@ -115,30 +116,30 @@
                                                 
                                                 <fieldset>
                                                     <legend>User Details</legend>
-                                                    <table class="TBL_40">
+                                                    <table class="PROFILE_ROW2">
                                     
                                                         <tr class=T_ROW2>
-                                                            <td class="w_40">New Password :</td>
+                                                            <td class="w_44 hide_it">New Password :</td>
                                                             <td>
-                                                                <input type="password" class="INPUT" name="password1" placeholder="Enter New Password">
+                                                                <input type="password" class="INPUT w_50" name="password1" placeholder="Enter New Password">
                                                             </td>
                                                         </tr>
 
                                                         <tr class=T_ROW2>
-                                                            <td class="w_40">Confirm New Password :</td>
+                                                            <td class="w_44 hide_it">Confirm Password :</td>
                                                             <td>
-                                                                <input type="password" class="INPUT" name="password" placeholder="Confirm New Password">
+                                                                <input type="password" class="INPUT w_50" name="password" placeholder="Confirm New Password">
                                                             </td>
                                                         </tr>
 
                                                     </table>
 
-                                                    <table class="TBL_40">
+                                                    <table class="PROFILE_ROW2">
                                     
                                                         <tr class=T_ROW2>
-                                                            <td class="w_40">Change Profile :</td>
+                                                            <td class="w_44 hide_it">Change Profile :</td>
                                                             <td>
-                                                                <input class="INPUT" type="file" name="userProfile">
+                                                                <input class="INPUT w_50" type="file" name="userProfile">
                                                             </td>
                                                         </tr>
 
@@ -180,7 +181,14 @@ if(isset($_POST['submit']))
     //Button Clicked
 
     //1. Get the data from Form
-    $password = md5($_POST['password']); //password encryption with md5
+    if($password!="")
+    {
+        $password = md5($_POST['password']); //password encryption with md5
+    }
+    else
+    {
+        $password = $password2;
+    }
 
             //2a. Upload images if selected
             //check whether Select Image is clicked or not and upload image only if selected
@@ -224,10 +232,10 @@ if(isset($_POST['submit']))
                         die();
                     }
                 }
-            }
-            else
-            {
-                $image_name = "No-Profile.jpg"; //setting default value
+                else
+                {
+                    $image_name = $userProfile; //setting default value
+                }
             }
 
             //3. SQL Query to Save the data into database
@@ -245,7 +253,7 @@ if(isset($_POST['submit']))
         {
             //Property Submitted
             //create session message variable to display message
-            $_SESSION['profile'] = "<div class='SUCCESS'>Profile Updated Successfully</div>";
+            $_SESSION['profile'] = "<div class='SUCCESS2'>Profile Updated Successfully</div>";
             //redirect to Manage Admin Page
             header('location:'.SITEURL_ADMIN.'index.php');
             ob_end_flush();
@@ -254,7 +262,7 @@ if(isset($_POST['submit']))
         {
             //failed to add Admin
             //create session message variable to display message
-            $_SESSION['profile'] = "<div class='ERROR'>Failed to Update Profile</div>";
+            $_SESSION['profile'] = "<div class='ERROR2'>Failed to Update Profile</div>";
             //redirect to Manage Admin Page
             header('location:'.SITEURL_ADMIN.'index.php');
             ob_end_flush();

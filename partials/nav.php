@@ -23,7 +23,7 @@ include('login_check.php');
 <body class="DARK_MODE">
 
 
-	<div id="pre_loader" class="pre_loader hidden">
+	<div id="pre_loader" class="pre_loader">
         <div class="loader">
             <div class="ring"></div>
             <div class="ring"></div>
@@ -33,7 +33,7 @@ include('login_check.php');
     </div>
 
 
-	<div id="SECTIONS" class="SECTIONS">
+	<div id="SECTIONS" class="SECTIONS hidden">
 
 		<!--===========================================================NAV_BAR_SECTION SECTION START====================================================-->
 		<nav>
@@ -44,7 +44,12 @@ include('login_check.php');
 				</a>
 			</div>
             <menu class="NAV_TOGGLER_MENU /// NAV_TOGGLER_CLOSE">
+
                 <ul>
+                    <li class="CLOSE_BTN_BOX hidden">
+                        <p class="CLOSE_BTN">X</p>
+                    </li>
+
                     <li>
                         <a class="NAV_LI" href="<?php echo SITEURL_USER; ?>">Home</a>
                     </li>
