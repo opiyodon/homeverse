@@ -25,6 +25,8 @@
     --primary2:#546918;
     --primary3:#e4faab;
 
+    --red:#e23c1f;
+
     --bg_bright:#dddee0;
     --bg_bright2:#d6d3d3;
     --bg_dim:#30312f;
@@ -393,7 +395,7 @@ ul li a:hover{
   height: 90vh;
   padding-top: 20px;
   padding-left: 130px;
-  background-image: url(../images/2.jpg);
+  background-image: url(../images/bg3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -483,7 +485,7 @@ ul li a:hover{
 ================================  LOGIN PAGE  ==============================================================
 ==================================================================================================================== */
 .login {
-  background: url(../images/15.jpg);
+  background: url(../images/bg11.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -528,7 +530,7 @@ ul li a:hover{
 ================================  REGISTER PAGE  ==============================================================
 ==================================================================================================================== */
 .register {
-  background: url(../images/11.jpg);
+  background: url(../images/bg4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -564,7 +566,7 @@ ul li a:hover{
 ================================  RESET PASSWORD PAGE  ==============================================================
 ==================================================================================================================== */
 .resetPassword {
-  background: url(../images/16.jpg);
+  background: url(../images/bg8.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -595,7 +597,7 @@ ul li a:hover{
 }
 
 
-.BTN_ROW
+
 /* ====================================================================================================================
 ================================  PROFILE PAGE  ==============================================================
 ==================================================================================================================== */
@@ -850,7 +852,7 @@ ul li a:hover{
   border: 8px solid var(--white);
   margin-top: 10px;
   padding: 80px 45px;
-  background: url('../images/4.jpeg');
+  background: url('../images/bg10.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -905,9 +907,11 @@ ul li a:hover{
   padding: 5px;
   border-radius: 50%;
   background: var(--primary3);
-  width: 15px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ABOUT .TXT_BOX .ROW .ICON .ICON_GROUP .ICON_GROUP_ITEM .icons .icons_item{
@@ -1000,6 +1004,11 @@ ul li a:hover{
   transition: all 0.3s ease-in-out;
 }
 
+.service_page_icon{
+  font-size: 50px;
+  color: var(--light_txt);
+}
+
 .Card .Card_img img{
   width: 90px;
   height: 90px;
@@ -1025,7 +1034,7 @@ ul li a:hover{
   margin-left: -20px;
   display: flex;
   flex-direction: column;
-  background: url('../images/9.jpg');
+  background: url('../images/bg5.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -1253,7 +1262,6 @@ ul li a:hover{
 }
 
 .cadz .CARD_IMG .STATUS .BADGE{
-  background: var(--primary);
   padding: 5px 20px;
   width: fit-content;
   border-radius: 15px;
@@ -1279,6 +1287,7 @@ ul li a:hover{
 .CITY_ICON_ITEM{
   width: 20px;
   height: 20px;
+  padding: 0px 3px;
 }
 
 .cadz .CARD_TXT{
@@ -1963,6 +1972,11 @@ legend{
   margin-left: -150px;
 }
 
+.contact_page_icon{
+  font-size: 50px;
+  color: var(--light_txt);
+}
+
 .CONTACT_FORM{
   width: 100%;
   display: flex;
@@ -2398,7 +2412,7 @@ legend{
 }
 
 .SUCCESSBOX2{
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 

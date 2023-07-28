@@ -73,7 +73,7 @@
 
                             <?php 
                                 //Sql Query 
-                                $sql4 = "SELECT * FROM reviews";
+                                $sql4 = "SELECT * FROM reviews WHERE active='Yes'";
                                 //Execute Query
                                 $res4 = mysqli_query($conn, $sql4);
                                 //Count Rows

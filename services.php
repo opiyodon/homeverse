@@ -23,7 +23,7 @@
             <div class="Card">
 
                 <div class="Card_img">
-                    <img src="images/acquire.png" alt="Discussion">
+                    <i class="fa-solid fa-credit-card service_page_icon"></i>
                 </div>
 
                 <div>
@@ -47,7 +47,7 @@
             <div class="Card">
 
                 <div class="Card_img">
-                    <img src="images/review.png" alt="Discussion">
+                    <i class="fa-solid fa-file-invoice service_page_icon"></i>
                 </div>
 
                 <div>
@@ -71,7 +71,7 @@
             <div class="Card">
 
                 <div class="Card_img">
-                    <img src="images/acquire.png" alt="Discussion">
+                    <i class="fa-solid fa-money-bill-trend-up service_page_icon"></i>
                 </div>
 
                 <div>
@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div class="CIRCLE2">
-                                    <img src="images/review.png" alt="Discussion" class="Card_img2">
+                                    <img src="images/discuss.png" alt="Discussion" class="Card_img2">
                                 </div>
 
                             </div>

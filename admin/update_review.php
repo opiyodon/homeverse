@@ -28,7 +28,11 @@
                             $id = $_GET['id'];
 
                             //sql query to get all other details
-                            $sql2 = "SELECT * FROM reviews WHERE id=$id";
+                            $sql2 = "SELECT reviews.*, user.userProfile 
+                                FROM reviews 
+                                INNER JOIN user ON reviews.username = user.username
+                                WHERE reviews.id=$id
+                                ORDER BY reviews.id DESC";
 
                             //execute query
                             $res2 = mysqli_query($conn, $sql2);
@@ -43,7 +47,7 @@
                                 $id=$row2['id'];
                                 $property_id=$row2['property_id'];
                                 $username=$row2['username'];
-                                $profileName=$row2['profileName'];
+                                $userProfile=$row2['userProfile'];
                                 $review=$row2['review'];
                                 $active=$row2['active'];
                             }
@@ -73,32 +77,32 @@
                                 <table class="TBL_30">
                                     
                                     <tr>
-                                        <td class="w_44">Username :</td>
+                                        <td class="w_44 hide_it">Username :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="username" value="<?php echo $username ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Property Id :</td>
+                                        <td class="w_44 hide_it">Property Id :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="property_id" value="<?php echo $property_id ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                                <td class="w_44">Profile :</td>
+                                                <td class="w_44 hide_it">Profile :</td>
                                                 <td>
 
                                                     <?php
 
                                                         //check whether image is availabele or not
-                                                        if($profileName!="")
+                                                        if($userProfile!="")
                                                         {
                                                             //display image
                                                             ?>
 
-                                                            <img src="../images/user/profileName/<?php echo $profileName ?>" class="PROP_IMG">
+                                                            <img src="../images/user/userProfile/<?php echo $userProfile ?>" class="PROP_IMG">
 
                                                             <?php
                                                         }
@@ -114,8 +118,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Active :</td>
+                                        <td class="w_44 hide_it">Active :</td>
                                         <td>
+                                            <p class="hide2">Active :</p>
                                             <div class="RADIO_BOX">
                                                 <div class="RADIO_BOX_ITEM">
                                                     <input type="radio" <?php if($active=='Yes'){echo "checked";} ?> name="active" value="Yes">

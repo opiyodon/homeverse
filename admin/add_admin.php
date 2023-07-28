@@ -108,7 +108,7 @@
             $sql = "INSERT INTO user SET
                 full_name = '$full_name',
                 username = '$username',
-                userProfile = 'No-Profile.jpg',
+                userProfile = 'No-Profile.png',
                 email = '$email',
                 phone = '$phone',
                 password = '$password',

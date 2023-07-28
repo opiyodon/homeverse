@@ -4,7 +4,7 @@
         <div class="Footer">
     
             <p>
-                &copy;2023 All rights reserved, Homeverse. Developed By - 
+                &copy;2023 All rights reserved, Homeverse. Developed By 
                 <a href="">
                     Katelina
                 </a>

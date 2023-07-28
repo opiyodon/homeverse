@@ -75,14 +75,14 @@
                                 <table class="TBL_30">
                                     
                                     <tr>
-                                        <td class="w_44">Name :</td>
+                                        <td class="w_44 hide_it">Name :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="propertyName" value="<?php echo $propertyName ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                                <td class="w_44">Background :</td>
+                                                <td class="w_44 hide_it">Background :</td>
                                                 <td>
 
                                                     <?php
@@ -109,14 +109,14 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Price :</td>
+                                        <td class="w_44 hide_it">Price :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="propertyPrice" value="<?php echo $propertyPrice ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Status :</td>
+                                        <td class="w_44 hide_it">Status :</td>
                                         <td>
                                             <select required class="INPUT2" name="status">
                                                 <option <?php if($status=="Ordered"){echo "selected";} ?> value="Ordered">Ordered</option>
@@ -129,7 +129,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Tenant :</td>
+                                        <td class="w_44 hide_it">Tenant :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="full_name" value="<?php echo $full_name ?>">
                                         </td>
@@ -141,14 +141,14 @@
                                 <table class="TBL_30">
                                     
                                     <tr>
-                                        <td class="w_44">Phone :</td>
+                                        <td class="w_44 hide_it">Phone :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="phone" value="<?php echo $phone ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Email :</td>
+                                        <td class="w_44 hide_it">Email :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="email" value="<?php echo $email ?>">
                                         </td>

@@ -45,7 +45,7 @@
 
                 <?php
                     //query to get all admin
-                    $sql = "SELECT * FROM property WHERE featured='Yes' AND active='Yes' ORDER BY id DESC";
+                    $sql = "SELECT * FROM property WHERE active='Yes' ORDER BY id DESC";
                     //execute the query
                     $res = mysqli_query($conn, $sql);
 
@@ -81,6 +81,7 @@
                                 $description=$rows['description'];
                                 $featured=$rows['featured'];
                                 $active=$rows['active'];
+                                $duration=$rows['duration'];
 
                                 //displaying the values in our table
                                 ?>
@@ -93,9 +94,18 @@
                                             <img src="images/property/background/<?php echo $backgroundName; ?>" alt="<?php echo $backgroundName; ?>">
                                                 
                                                 <div class="STATUS">
-                                                    <div class="BADGE">
-                                                        <p><?php echo $status; ?></p>
-                                                    </div>
+                                                    <?php 
+                                                        // status
+
+                                                        if($status=="For Rent")
+                                                        {
+                                                            echo "<div class='BADGE' style='background: var(--primary);'>$status</div>";
+                                                        }
+                                                        elseif($status=="For Sale")
+                                                        {
+                                                            echo "<div class='BADGE' style='background: var(--red);'>$status</div>";
+                                                        }
+                                                    ?>
                                                 </div>
                                                 
                                                 <div class="CITY">
@@ -103,10 +113,7 @@
                                                         <div class="CITY_ICON">
                                                             <div>
                                                                 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CITY_ICON_ITEM">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                                </svg>                              
+                                                                <i class="fa-solid fa-city CITY_ICON_ITEM"></i>                              
                                         
                                                             </div>
                                                             <p><?php echo $city; ?></p>
@@ -116,15 +123,12 @@
                                                     <div class="ROW">
                                                         <div></div>
                                                         <div class="CITY_ICON">
+                                                            <p>2</p>
                                                             <div>
                                                                 
-                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CITY_ICON_ITEM">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                                </svg>                              
+                                                                <i class="fa-solid fa-image CITY_ICON_ITEM"></i>                              
                                         
                                                             </div>
-                                                            <p>2</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -134,7 +138,20 @@
 
                                             <div class="AMOUNT">
                                                 <p class="PRICE">Ksh. <?php echo $price; ?></p>
-                                                <p class="MONTH">/Month</p>
+                                                <p class="MONTH">
+                                                    <?php 
+                                                        // per month
+
+                                                        if($status=="For Rent")
+                                                        {
+                                                            echo "<label style='color: red;'>$duration</label>";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo "<label></label>";
+                                                        }
+                                                    ?>
+                                                </p>
                                             </div>
 
                                             <div class="HOUSE">
@@ -154,10 +171,7 @@
 
                                                         <div>
                                                             
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CITY_ICON_ITEM">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                            </svg>                              
+                                                            <i class="fa-solid fa-bed CITY_ICON_ITEM"></i>                             
                         
                                                         </div>
                                             
@@ -173,10 +187,7 @@
 
                                                         <div>
                                                             
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CITY_ICON_ITEM">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                            </svg>                              
+                                                            <i class="fa-solid fa-bath CITY_ICON_ITEM"></i>                              
                         
                                                         </div>
                                             
@@ -192,10 +203,7 @@
 
                                                         <div>
                                                             
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="CITY_ICON_ITEM">
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                                                            </svg>                              
+                                                            <i class="fa-solid fa-ruler-combined CITY_ICON_ITEM"></i>                             
                         
                                                         </div>
                                             

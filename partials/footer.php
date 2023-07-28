@@ -9,14 +9,14 @@
             
                 <div class="logo">
 				    <a href="index.php">
-					    <img src="images/9.jpg" alt="Homeverse Logo">
+					    <img src="images/bg5.jpg" alt="Homeverse Logo">
 					    Home<span>verse.</span>
 				    </a>
 			    </div>
     
                 <div class="footer-text">
                     <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, provident recusandae illo officia aliquam veniam nemo illum.
+                        Choose your living style today. Here at Homeverse we help you live your dreams to the fullest by giving your the best property of your choice at all times.
                     </p>
                 </div>
                 
@@ -47,7 +47,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="<?php echo SITEURL_USER; ?>profile.php?id=<?php echo $id; ?>&username=<?php echo $username; ?>">
                             My Account
                         </a>
                     </li>
@@ -63,25 +63,25 @@
                 <ul class="quicklinks">
     
                         <li>
-                            <a href="<?php echo SITEURL_USER; ?>about">
+                            <a href="<?php echo SITEURL_USER; ?>about.php">
                                 About
                             </a>
                         </li>
     
                         <li>
-                            <a href="#Blog">
+                            <a href="<?php echo SITEURL_USER; ?>blog.php">
                                 Blog
                             </a>
                         </li>
     
                         <li>
-                            <a href="<?php echo SITEURL_USER; ?>contact">
+                            <a href="<?php echo SITEURL_USER; ?>contact.php">
                                 Contact
                             </a>
                         </li>
     
                         <li>
-                            <a href="#FAQ">
+                            <a href="#">
                                 FAQ
                             </a>
                         </li>
@@ -109,7 +109,7 @@
                                           </svg>                              
                 
                                     </div>
-                                    27 Ingram Street, Dayton
+                                    Kabarak University, Nakuru
                                 </div>
                             </a>
                         </li>
@@ -124,7 +124,7 @@
                                           </svg>                              
                 
                                     </div>
-                                    +1 234-567-8910
+                                    0714358910
                                 </div>
                             </a>
                         </li>
@@ -192,7 +192,7 @@
     
         <div class="DEV">
             <div class="ROW">
-                <p>&copy;2023 Homeverse | Developed By <a href="#" class="text-primary underline">Artkins</a></p>
+                <p>&copy;2023 All rights reserved, Homeverse. Developed By <a href="#" class="text-primary underline">Katelina</a></p>
                 <div>
                     <a href="#" class="terms">Terms & Condition</a>
                 </div>

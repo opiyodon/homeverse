@@ -29,7 +29,7 @@
                     <div class="Card">
     
                         <div>
-                            <img src="images/acquire.png" alt="Discussion" class="Card_img2">
+                            <i class="fa-solid fa-phone-volume contact_page_icon"></i>
                         </div>
     
                         <a href="#">
@@ -47,7 +47,7 @@
                     <div class="Card">
     
                         <div>
-                            <img src="images/review.png" alt="Discussion" class="Card_img2">
+                            <i class="fa-solid fa-envelope contact_page_icon"></i>
                         </div>
     
                         <a href="#">
@@ -65,7 +65,7 @@
                     <div class="Card">
     
                         <div>
-                            <img src="images/acquire.png" alt="Discussion" class="Card_img2">
+                            <i class="fa-solid fa-location-dot contact_page_icon"></i>
                         </div>
     
                         <a href="#">
@@ -158,7 +158,7 @@
                         <div class="CONTACT_MAP">
                             <div>
             
-                                <iframe class="CONTACT_MAP_ITEM" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6709.971064919377!2d36.034636629210816!3d-0.27409609980470795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18298dd7388806c5%3A0xa68672a04fad1db!2sKabarak%20University!5e0!3m2!1sen!2ske!4v1665729141752!5m2!1sen!2ske"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe class="CONTACT_MAP_ITEM" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.801298645712!2d35.96237177376088!3d-0.16736423542419843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829f6f367bba6d9%3A0x363c14244dccdde!2sKabarak%20University!5e0!3m2!1sen!2ske!4v1690535122863!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 
                             </div>
                         </div>

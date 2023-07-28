@@ -44,7 +44,10 @@
 
                         <?php
                             //query to get all admin
-                            $sql = "SELECT * FROM reviews ORDER BY id DESC";
+                            $sql = "SELECT reviews.*, user.userProfile 
+                                FROM reviews 
+                                INNER JOIN user ON reviews.username = user.username 
+                                ORDER BY reviews.id DESC";
                             //execute the query
                             $res = mysqli_query($conn, $sql);
 
@@ -71,6 +74,7 @@
                                         $username=$rows['username'];
                                         $review=$rows['review'];
                                         $active=$rows['active'];
+                                        $userProfile = $rows['userProfile'];
 
                                         //displaying the values in our table
                                         ?>
@@ -79,64 +83,29 @@
                                                 <td class="text_center"><?php echo $sn++ ?>.</td>
                                                 <td class="text_center"><?php echo $username ?></td>
 
-                                                <?php
-                                                //query to get all admin
-                                                $sql5 = "SELECT userProfile FROM user";
-                                                //execute the query
-                                                $res5 = mysqli_query($conn, $sql5);
+                                                <td class="text_center">
 
-                                                //check whether the query is executed or not
-                                                if($res5==TRUE)
-                                                {
-                                                    //Count rows to check whether we have data in database or not
-                                                    $count5 = mysqli_num_rows($res5);//function to get all rows in the database
+                                                    <?php
 
-                                                    //check the num of rows
-                                                    if($count5>0)
-                                                    {
-                                                        //we have data in database
-                                                        while($rows5=mysqli_fetch_assoc($res5))
+                                                        //check whether image is availabele or not
+                                                        if($userProfile!="")
                                                         {
-                                                            //using while loop to get all the data from database
-                                                            //and while loop will run as long as theres data in database
+                                                            //display image
+                                                    ?>
 
-                                                            //get individual data
-                                                            $userProfile=$rows5['userProfile'];
+                                                        <img src="../images/user/userProfile/<?php echo $userProfile ?>" class="PROP_IMG">
 
-                                                            //displaying the values in our table
-                                                            ?>
-
-                                                                <td class="text_center">
-
-                                                                    <?php
-
-                                                                        //check whether image is availabele or not
-                                                                        if($userProfile!="")
-                                                                        {
-                                                                            //display image
-                                                                            ?>
-
-                                                                            <img src="../images/user/userProfile/<?php echo $userProfile ?>" class="PROP_IMG">
-
-                                                                            <?php
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            //display message
-                                                                            echo "<div class='ERROR'>Image Not Added</div>";
-                                                                        }
-
-                                                                    ?>
-
-                                                                </td>
-
-                                                                        
-
-                                                <?php 
-                                                            }
+                                                    <?php
                                                         }
-                                                    }
-                                                ?>
+                                                        else
+                                                        {
+                                                            //display message
+                                                            echo "<div class='ERROR'>Image Not Added</div>";
+                                                        }
+
+                                                    ?>
+
+                                                </td>
                                                 
                                                 <td class="text_center"><?php echo $property_id ?></td>
                                                 <td class="text_center"><?php echo $active ?></td>
@@ -146,7 +115,7 @@
                                                         <a href="<?php echo SITEURL_ADMIN; ?>update_review.php?id=<?php echo $id; ?>">
                                                             <p class="btn2 BTN_SEC">Update Review</p>
                                                         </a>
-                                                        <a href="<?php echo SITEURL_ADMIN; ?>delete_review.php?id=<?php echo $id; ?>&profileName=<?php echo $profileName; ?>">
+                                                        <a href="<?php echo SITEURL_ADMIN; ?>delete_review.php?id=<?php echo $id; ?>">
                                                             <p class="btn2 BTN_DAN">Delete Review</p>
                                                         </a>
                                                     </div>

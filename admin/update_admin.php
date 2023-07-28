@@ -92,7 +92,7 @@
                             <tr>
                                 <td class="hide_it">Admin</td>
                                 <td>
-                                    <p class="hide2">Admin</p>
+                                    <p class="hide2">Admin :</p>
                                     <div class="RADIO_BOX">
                                         <div class="RADIO_BOX_ITEM">
                                             <input type="radio" <?php if($admin=='Yes'){echo "checked";} ?> name="admin" value="Yes">
@@ -141,7 +141,6 @@
 
             //create sql to update admin
             $sql = "UPDATE user SET
-            full_name='$full_name',
             username='$username',
             email='$email',
             phone='$phone',

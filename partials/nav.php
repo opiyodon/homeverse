@@ -15,7 +15,7 @@ include('login_check.php');
 	<title>
 		Homeverse
 	</title>
-	<link  href="images/9.jpg"  type="image/x-icon" rel="icon">
+	<link  href="images/bg5.jpg"  type="image/x-icon" rel="icon">
 	<link  href="css/style.css"  type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -39,7 +39,7 @@ include('login_check.php');
 		<nav>
             <div class="logo">
 				<a href="index.php">
-					<img src="images/9.jpg" alt="Homeverse Logo">
+					<img src="images/bg5.jpg" alt="Homeverse Logo">
 					Home<span>verse.</span>
 				</a>
 			</div>
@@ -102,6 +102,7 @@ include('login_check.php');
 
                                         // Get individual data
                                         $id = $rows['id'];
+                                        $username = $rows['username'];
                                         $userProfile = $rows['userProfile'];
                                         
                                         // Display the values in our card
@@ -121,7 +122,7 @@ include('login_check.php');
                                                 }
                                             ?>
                                             <div class="dropdown" id="dropdownMenu">
-                                                <a class="NAV_LI dropdown-item" href="<?php echo SITEURL_USER; ?>profile.php?id=<?php echo $id; ?>">View Profile</a>
+                                                <a class="NAV_LI dropdown-item" href="<?php echo SITEURL_USER; ?>profile.php?id=<?php echo $id; ?>&username=<?php echo $username; ?>">View Profile</a>
                                                 <a class="NAV_LI dropdown-item" href="<?php echo SITEURL_USER; ?>logout.php">Logout</a>
                                             </div>
                                         </div>

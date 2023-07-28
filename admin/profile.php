@@ -10,20 +10,6 @@
                     </div>
                 </div>
 
-                <?php 
-                    if(isset($_SESSION['upload']))
-                    {
-                        echo $_SESSION['upload'];
-                        unset($_SESSION['upload']);
-                    } 
-
-                    if(isset($_SESSION['profile']))
-                    {
-                        echo $_SESSION['profile'];
-                        unset($_SESSION['profile']);
-                    }
-                ?>
-
         <div class="CARD_BOX">
 
 
@@ -180,13 +166,12 @@ if(isset($_POST['submit']))
 {
     //Button Clicked
 
-    //1. Get the data from Form
-    if($password!="")
-    {
-        $password = md5($_POST['password']); //password encryption with md5
-    }
-    else
-    {
+    // check whether password is updated or not and update if there is a new password
+    $newPassword = $_POST['password'];
+    if ($newPassword != "") {
+        $password = md5($newPassword); // password encryption with md5
+    } else {
+        // If no new password is provided, keep the existing password
         $password = $password2;
     }
 

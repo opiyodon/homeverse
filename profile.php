@@ -10,28 +10,15 @@
                     </div>
                 </div>
 
-                <?php 
-                    if(isset($_SESSION['upload']))
-                    {
-                        echo $_SESSION['upload'];
-                        unset($_SESSION['upload']);
-                    } 
-
-                    if(isset($_SESSION['profile']))
-                    {
-                        echo $_SESSION['profile'];
-                        unset($_SESSION['profile']);
-                    }
-                ?>
-
         <div class="CARD_BOX">
 
 
                 <?php
                 
                     $id=$_GET['id'];
+                    $username=$_GET['username'];
                     //query to get all admin
-                    $sql = "SELECT * FROM user WHERE id=$id";
+                    $sql = "SELECT * FROM user WHERE id='$id' AND username='$username'";
                     //execute the query
                     $res = mysqli_query($conn, $sql);
 
@@ -56,6 +43,7 @@
                                 $userProfile=$rows['userProfile'];
                                 $email=$rows['email'];
                                 $phone=$rows['phone'];
+                                $password2=$rows['password'];
 
                                 //displaying the values in our table
                                 ?>
@@ -180,7 +168,15 @@ if(isset($_POST['submit']))
     //Button Clicked
 
     //1. Get the data from Form
-    $password = md5($_POST['password']); //password encryption with md5
+
+    // check whether password is updated or not and update if there is a new password
+    $newPassword = $_POST['password'];
+    if ($newPassword != "") {
+        $password = md5($newPassword); // password encryption with md5
+    } else {
+        // If no new password is provided, keep the existing password
+        $password = $password2;
+    }
 
             //2a. Upload images if selected
             //check whether Select Image is clicked or not and upload image only if selected
@@ -217,24 +213,24 @@ if(isset($_POST['submit']))
                     {
                         //failed to upload the image
                         //redirect to home page with error
-                        $_SESSION['upload'] = "<div class='ERROR'>Failed to Upload Image</div>";
+                        $_SESSION['upload'] = "<div class='SUCCESSBOX2'><div class='ERROR2'>Failed to Upload Image</div></div>";
                         header('location:'.SITEURL_USER.'index.php');
                         ob_end_flush();
                         //stop the process
                         die();
                     }
                 }
-            }
-            else
-            {
-                $image_name = "No-Profile.jpg"; //setting default value
+                else
+                {
+                    $image_name = $userProfile; //setting default value
+                }
             }
 
             //3. SQL Query to Save the data into database
             $sql2 = "UPDATE user SET
                 userProfile = '$image_name',
                 password = '$password'
-                WHERE id=$id
+                WHERE id='$id' AND username='$username'
             ";
 
     //4. Executing query and inserting data into database
@@ -245,7 +241,7 @@ if(isset($_POST['submit']))
         {
             //Property Submitted
             //create session message variable to display message
-            $_SESSION['profile'] = "<div class='SUCCESS'>Profile Updated Successfully</div>";
+            $_SESSION['profile'] = "<div class='SUCCESSBOX2'><div class='SUCCESS2'>Profile Updated Successfully</div></div>";
             //redirect to Manage Admin Page
             header('location:'.SITEURL_USER.'index.php');
             ob_end_flush();
@@ -254,7 +250,7 @@ if(isset($_POST['submit']))
         {
             //failed to add Admin
             //create session message variable to display message
-            $_SESSION['profile'] = "<div class='ERROR'>Failed to Update Profile</div>";
+            $_SESSION['profile'] = "<div class='SUCCESSBOX2'><div class='ERROR2'>Failed to Update Profile</div></div>";
             //redirect to Manage Admin Page
             header('location:'.SITEURL_USER.'index.php');
             ob_end_flush();

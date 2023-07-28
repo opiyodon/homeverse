@@ -8,7 +8,7 @@
         <title>
             Homeverse
         </title>
-        <link  href="images/9.jpg"  type="image/x-icon" rel="icon">
+        <link  href="images/bg5.jpg"  type="image/x-icon" rel="icon">
         <link  href="css/style.css"  type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
@@ -161,7 +161,7 @@
                 }
                 else
                 {
-                    $image_name = "No-Profile.jpg"; //setting default value
+                    $image_name = "No-Profile.png"; //setting default value
                 }
             }
 
@@ -184,7 +184,7 @@
                 {
                     //Admin Added
                     //create session message variable to display message
-                    $_SESSION['add'] = "<div class='SUCCESS'>Account Created Successfully</div>";
+                    $_SESSION['register'] = "<div class='SUCCESS'>Account Created Successfully</div>";
                     //redirect to Manage Admin Page
                     header('location:'.SITEURL_USER.'login.php');
                     ob_end_flush();
@@ -193,7 +193,7 @@
                 {
                     //failed to add Admin
                     //create session message variable to display message
-                    $_SESSION['add'] = "<div class='ERROR'>Failed to Create Account</div>";
+                    $_SESSION['register'] = "<div class='ERROR'>Failed to Create Account</div>";
                     //redirect to Manage Admin Page
                     header('location:'.SITEURL_USER.'login.php');
                     ob_end_flush();

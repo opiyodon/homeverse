@@ -56,9 +56,11 @@
                                 //get individual data
                                 $id=$rows['id'];
                                 $name=$rows['name'];
+                                $status=$rows['status'];
                                 $backgroundName=$rows['backgroundName'];
                                 $price=$rows['price'];
                                 $description=$rows['description'];
+                                $duration=$rows['duration'];
 
                                 //displaying the values in our table
                                 ?>
@@ -104,7 +106,20 @@
                                                                 </div>
                                                                 <div class="order_price">
                                                                     <p class="PRICE">Ksh. <?php echo $price; ?></p>
-                                                                    <p class="MONTH">/Month</p>
+                                                                    <p class="MONTH">
+                                                                        <?php 
+                                                                            // per month
+
+                                                                            if($status=="For Rent")
+                                                                            {
+                                                                                echo "<label style='color: red;'>$duration</label>";
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                echo "<label></label>";
+                                                                            }
+                                                                        ?>
+                                                                    </p>
                                                                 </div>
                                                                 <div class="order_description">
                                                                     <p><?php echo $description; ?></p>

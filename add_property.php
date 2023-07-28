@@ -428,11 +428,16 @@
                                 description = '$description',
                                 featured = '$featured',
                                 active = 'Yes',
+                                duration = '/Month',
                                 blog = 'No',
                                 owner = '$owner',
                                 phone = $phone,
                                 whatsapp = $whatsapp,
-                                email = '$email'
+                                email = '$email',
+                                comment = '',
+                                featured_blog = '',
+                                active_blog = '',
+                                dates = '0000-00-00'
                             ";
 
                             //4. Executing query and inserting data into database
@@ -443,7 +448,7 @@
                                 {
                                     //Property Submitted
                                     //create session message variable to display message
-                                    $_SESSION['add'] = "<div class='SUCCESSBOX2'><div class='SUCCESS'>Property Submitted Successfully</div></div>";
+                                    $_SESSION['add'] = "<div class='SUCCESSBOX2'><div class='SUCCESS2'>Property Submitted Successfully</div></div>";
                                     //redirect to Manage Admin Page
                                     header('location:'.SITEURL_USER.'index.php');
                                     ob_end_flush();

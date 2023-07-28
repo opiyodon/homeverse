@@ -311,6 +311,7 @@ ul li a:hover{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    border: 2px solid var(--primary);
   }
 
   .dropdown {
@@ -555,7 +556,7 @@ ul li a:hover{
 ================================  LOGIN PAGE  ==============================================================
 ==================================================================================================================== */
 .login {
-  background: url(../../images/11.jpg);
+  background: url(../../images/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -600,7 +601,7 @@ ul li a:hover{
 ================================  RESET PASSWORD PAGE  ==============================================================
 ==================================================================================================================== */
 .resetPassword {
-  background: url(../../images/16.jpg);
+  background: url(../../images/bg8.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

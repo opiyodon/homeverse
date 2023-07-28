@@ -75,21 +75,21 @@
                                 <table class="TBL_30">
                                     
                                     <tr>
-                                        <td class="w_44">Name :</td>
+                                        <td class="w_44 hide_it">Name :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="name" value="<?php echo $name ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Type :</td>
+                                        <td class="w_44 hide_it">Type :</td>
                                         <td>
                                             <input type="text" class="INPUT" name="type" value="<?php echo $type ?>">
                                         </td>
                                     </tr>
 
                                     <tr>
-                                                <td class="w_44">Background :</td>
+                                                <td class="w_44 hide_it">Background :</td>
                                                 <td>
 
                                                     <?php
@@ -116,8 +116,9 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Featured :</td>
+                                        <td class="w_44 hide_it">Featured :</td>
                                         <td>
+                                            <p class="hide2">Featured :</p>
                                             <div class="RADIO_BOX">
                                                 <div class="RADIO_BOX_ITEM">
                                                     <input type="radio" name="featured_blog" value="Yes">
@@ -132,7 +133,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td class="w_44">Date :</td>
+                                        <td class="w_44 hide_it">Date :</td>
                                         <td>
                                             <input type="date" class="INPUT" name="dates" value="<?php echo $dates ?>">
                                         </td>

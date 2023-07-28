@@ -316,22 +316,6 @@
                                     </tr>
 
                                     <tr class="T_ROW">
-                                        <td class="w_44">Blog :</td>
-                                        <td>
-                                            <div class="RADIO_BOX">
-                                                <div class="RADIO_BOX_ITEM">
-                                                    <input type="radio" <?php if($blog=='Yes'){echo "checked";} ?> name="blog" value="Yes">
-                                                    <p>Yes</p>
-                                                </div>
-                                                <div class="RADIO_BOX_ITEM">
-                                                    <input type="radio" <?php if($blog=='No'){echo "checked";} ?> name="blog" value="No">
-                                                    <p>No</p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="T_ROW">
                                         <td class="w_44">Owner :</td>
                                         <td>
                                             <input type="text" class="INPUT w_50" name="owner" value="<?php echo $owner ?>">
@@ -616,10 +600,6 @@
                             //5. SQL Query to Save the data into database
                             //for numerical values we do not need to pass value inside quotes "" but for string values it is compulsory
                             $sql = "UPDATE property SET
-                                name = '$name',
-                                type = '$type',
-                                status = '$status',
-                                city = '$city',
                                 backgroundName = '$image_name',
                                 pictureName = '$image_name2',
                                 pictureName2 = '$image_name3',
@@ -627,13 +607,9 @@
                                 discount = $discount,
                                 price = ($oldPrice-$discount),
                                 discountPercent = ($discount/$oldPrice*100),
-                                bedrooms = $bedrooms,
-                                bathrooms = $bathrooms,
-                                squareFt = $squareFt,
                                 description = '$description',
                                 featured = '$featured',
                                 active = '$active',
-                                blog = '$blog',
                                 owner = '$owner',
                                 phone = $phone,
                                 whatsapp = $whatsapp,

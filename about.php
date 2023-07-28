@@ -12,7 +12,7 @@
 					</div>
 
 					<div class="hide_it">
-						<img src="images/5.jpeg" alt="" class="IMG2">
+						<img src="images/bg1.jpeg" alt="" class="IMG2">
 					</div>
 				</div>
 
@@ -38,7 +38,7 @@
 							<div class="ICON_GROUP">
 								<div class="ICON_GROUP_ITEM">
 									<div class="icons">
-										<i class="fas fa-sun icons_item"></i>
+										<i class="fa-solid fa-house-signal icons_item"></i>
 									</div>
 		
 									<div class="txt">
@@ -48,7 +48,7 @@
 		
 								<div class="ICON_GROUP_ITEM">
 									<div class="icons">
-										<i class="fas fa-moon icons_item"></i>
+										<i class="fa-solid fa-leaf icons_item"></i>
 									</div>
 		
 									<div class="txt">
@@ -60,7 +60,7 @@
 							<div class="ICON_GROUP">
 								<div class="ICON_GROUP_ITEM">
 									<div class="icons">
-										<i class="fas fa-moon icons_item"></i>
+										<i class="fa-solid fa-feather icons_item"></i>
 									</div>
 		
 									<div class="txt">
@@ -70,7 +70,7 @@
 		
 								<div class="ICON_GROUP_ITEM">
 									<div class="icons">
-										<i class="fas fa-sun icons_item"></i>
+										<i class="fa-solid fa-shield-halved icons_item"></i>
 									</div>
 		
 									<div class="txt">
