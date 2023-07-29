@@ -192,7 +192,11 @@
     
         <div class="DEV">
             <div class="ROW">
-                <p>&copy;2023 All rights reserved, Homeverse. Developed By <a href="#" class="text-primary underline">Katelina</a></p>
+                <p>&copy;2023 All rights reserved, Homeverse. Developed By 
+                    <a href="https://opiyodon.netlify.app" class="text-primary underline">
+                        Artkins
+                    </a>
+                </p>
                 <div>
                     <a href="#" class="terms">Terms & Condition</a>
                 </div>

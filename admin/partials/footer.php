@@ -5,8 +5,8 @@
     
             <p>
                 &copy;2023 All rights reserved, Homeverse. Developed By 
-                <a href="">
-                    Katelina
+                <a href="https://opiyodon.netlify.app">
+                    Artkins
                 </a>
             </p>
         
