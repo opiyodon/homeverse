@@ -5,7 +5,7 @@
     
             <p>
                 &copy;2023 All rights reserved, Homeverse. Developed By 
-                <a href="https://opiyodon.netlify.app">
+                <a href="http://opiyodon.netlify.app/" target="_blank">
                     Artkins
                 </a>
             </p>

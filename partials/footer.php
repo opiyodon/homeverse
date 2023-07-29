@@ -193,7 +193,7 @@
         <div class="DEV">
             <div class="ROW">
                 <p>&copy;2023 All rights reserved, Homeverse. Developed By 
-                    <a href="https://opiyodon.netlify.app" class="text-primary underline">
+                    <a href="http://opiyodon.netlify.app/" target="_blank" class="text-primary underline">
                         Artkins
                     </a>
                 </p>
